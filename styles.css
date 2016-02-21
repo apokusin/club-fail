@@ -8,10 +8,6 @@ body {
   font-size: 100%;
 }
 
-/* 440px max screen width*/
-@media only screen and (max-width: 440px) {
-}
-
 .content-container > header {
   width: 100%;
   height: 56px;
@@ -115,6 +111,12 @@ nav a.current {
   display: inline-block;
   font-weight: bold;
   font-size: 12px;
+}
+
+.content-area .content-links a {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 12px;
   padding: 1em;
   border: 1px solid #eee;
   background: #fff;
@@ -131,6 +133,22 @@ nav a.current {
   border: 1px solid #ebebeb;
   font-size: 0.8em;
   font-weight: 600;
+}
+
+.content-area ul.content-list {
+  list-style-type: none;
+  margin-top: 1em;
+}
+
+.content-area ul.content-list li {
+  vertical-align: middle;
+  height: 20px;
+  margin-top: 15px;
+}
+.content-area ul.content-list li img {
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
 }
 
 .content-area .content-well .content-division {
