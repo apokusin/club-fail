@@ -12,6 +12,7 @@
 
   body {
     font-family: sans-serif;
+    font-size: 100%;
   }
   .content-container {
     position: fixed;
@@ -91,25 +92,80 @@
     width: 100%;
     height: 100%;
   }
+
+  .content-area {
+    padding: 2em 1em;
+  }
+
+  .content-area .page-title {
+    font-size: 3em;
+    font-weight: 200;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+    color: #aaa;
+  }
+
+  .content-area p {
+    color: #444;
+    line-height: 1.4em;
+    border-radius: 3px;
+    margin-bottom: 1em;
+  }
+  .content-area .subtitle {
+    font-size: 1.2em;
+    line-height: 1.3em;
+    margin-bottom: 1em;
+    opacity: #666;
+  }
+
+  .content-area a {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 1em;
+    border: 1px solid #eee;
+    background: #fff;
+  }
+
+  .content-area .content-links {
+    margin-top: 1em;
+  }
+
+  .content-area .content-well {
+    padding: 2em;
+    margin-top: 3em;
+    background: #fafafa;
+    border: 1px solid #ebebeb;
+    font-size: 0.8em;
+    font-weight: 600;
+  }
   </style>
 </head>
 <body>
   <div class="content-container">
     <header>
       <section class="info-area">
-        <a href="/index.html" class="current">
+        <a href="/">
           <h1 class="title">Club fail</h1>
           <p class="subtitle">no douchebaggery</p>
         </a>
       </section>
       <section class="links-area">
         <nav>
-          <a class="current" href="index.html">Map</a>
+          <a href="index.html">Map</a>
           <a href="backpacks.html">Backpacks</a>
-          <a href="map-markers.html">Map Markers</a>
+          <a class="current" href="map-markers.html">Map Markers</a>
         </nav>
       </section>
     </header>
-    <iframe class="map-area" src="http://minecraft-host.club.fail:8123" />
-  </iframe>
+    <div class="content-area">
+      <h2 class="page-title">Map Markers</h2>
+      <p class="subtitle">Use signs to add markers to the map on this site.</p>
+      <p>Place a sign down and make the first line say: <strong style="font-size: 1.3em"><code>[dynmap]</code></strong></p>
+      <div class="content-well">
+        <p>The sign below will create a marker titled <em>Tree of Life</em></p>
+        <p><img src="https://d.pr/1euF8.png" width="256" /></p>
+      </div>
+    </div>
+  </div>
 </body>

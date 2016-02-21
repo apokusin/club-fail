@@ -91,25 +91,74 @@
     width: 100%;
     height: 100%;
   }
+
+  .content-area {
+    padding: 2em 1em;
+  }
+
+  .content-area .page-title {
+    font-size: 3em;
+    font-weight: 200;
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+    color: #aaa;
+  }
+
+  .content-area p {
+    color: #444;
+    line-height: 1.4em;
+    border-radius: 3px;
+  }
+  .content-area .subtitle {
+    font-size: 1.2em;
+    line-height: 1.3em;
+    margin-bottom: 1em;
+    opacity: #666;
+  }
+
+  .content-area a {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 1em;
+    border: 1px solid #eee;
+    background: #fff;
+  }
+
+  .content-area .content-links {
+    margin-top: 1em;
+  }
+
   </style>
 </head>
 <body>
   <div class="content-container">
     <header>
       <section class="info-area">
-        <a href="/index.html" class="current">
+        <a href="/">
           <h1 class="title">Club fail</h1>
           <p class="subtitle">no douchebaggery</p>
         </a>
       </section>
       <section class="links-area">
         <nav>
-          <a class="current" href="index.html">Map</a>
-          <a href="backpacks.html">Backpacks</a>
+          <a href="index.html">Map</a>
+          <a class="current" href="backpacks.html">Backpacks</a>
           <a href="map-markers.html">Map Markers</a>
         </nav>
       </section>
     </header>
-    <iframe class="map-area" src="http://minecraft-host.club.fail:8123" />
-  </iframe>
+    <div class="content-area">
+      <h2 class="page-title">Backpacks</h2>
+      <p class="subtitle">A plugin allows creation and use of backpacks.</p>
+      <p>A backpack takes the place of your chestplate.</p>
+      <p>Backpacks can be accessed by creating and using a key.</p>
+
+      <div class="content-links">
+        <a target="_blank" href="http://dev.bukkit.org/bukkit-plugins/backpack-item/#w-showcases">Learn how to use backpacks</a>
+        <a target="_blank" href="http://dev.bukkit.org/bukkit-plugins/backpack-item/pages/screenshots/">Screenshots</a>
+
+      </div>
+    </div>
+  </div>
 </body>
