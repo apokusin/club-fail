@@ -10,7 +10,7 @@ body {
 
 /* 440px max screen width*/
 @media only screen and (max-width: 440px) {
-
+}
 
 .content-container > header {
   width: 100%;
