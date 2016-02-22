@@ -23,7 +23,7 @@ body {
 }
 
 .info-area .title {
-  background: url('club-fail-logo.png') 0 center no-repeat;
+  background: url('club-fail-logo.svg') 0 center no-repeat;
   background-size: 100% ;
   color: transparent;
   font-size: 0;
