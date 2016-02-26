@@ -76,17 +76,17 @@
           }
           var msg = new FormData();
           msg.append('message', document.ping.message.value);
-          var data = JSON.stringify(msg);
-          console.log(data);
-          if (!data) {
+
+          console.log(msg);
+          if (!msg) {
             return false;
           }
           var request = new XMLHttpRequest();
           request.open('POST', 'http://198.199.94.245:22222', true);
           request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 
-          // send the collected data as JSON
-          request.send(data);
+          request.send(msg);
+
           request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) {
               disablePing();
