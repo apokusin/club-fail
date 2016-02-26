@@ -74,10 +74,10 @@
           if (ev){
             ev.preventDefault();
           }
-          var msg = new FormData();
-          msg.append('message', document.ping.message.value);
+          var msg = encodeURIComponent('message') + '=' + encodeURIComponent(document.ping.message.value);
 
           console.log(msg);
+
           if (!msg) {
             return false;
           }
