@@ -75,25 +75,26 @@
             ev.preventDefault();
           }
 
-          var msg = { message: document.ping.message.value || 'ping'};
-          var data = JSON.stringify(msg);
+          var data = document.ping;
           if (!data) {
             return false;
           }
           var request = new XMLHttpRequest();
           request.open('POST', 'http://198.199.94.245:22222', true);
-          request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
 
           // send the collected data as JSON
           console.log(data);
           request.send(data);
           request.onreadystatechange = function() {
-            if (xhttp.readyState == 4 && xhttp.status == 200)
+            if (request.readyState == 4 && request.status == 200) {
               disablePing();
+
               document.ping.innerHTML = '<h2 class="page-title">Message sent</h2>';
+
               var tagline = document.createElement('label');
               tagline.innerText = 'You look nice today';
               document.ping.appendChild(tagline);
+
               if (cooldown !== undefined) {
                 cooldown = window.setTimeout(enablePing, 300000);
               }
