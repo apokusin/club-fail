@@ -75,7 +75,7 @@
             ev.preventDefault();
           }
 
-          var data = document.ping;
+          var data = new FormData(document.ping);
           if (!data) {
             return false;
           }
