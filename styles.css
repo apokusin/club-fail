@@ -283,6 +283,10 @@ nav a.current {
   margin: 0 auto;
 }
 
+.ping-dialog form label.error {
+    color: #ee0000;
+}
+
 .ping-dialog form label {
   display:block;
   font-size: 14px;

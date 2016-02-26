@@ -87,15 +87,22 @@
           // send the collected data as JSON
           console.log(data);
           request.send(data);
-          disablePing();
-
-          request.onloadend = function (e) {
-            document.ping.innerHTML = '<h2 class="page-title">Message sent</h2>';
-            var tagline = document.createElement('label');
-            tagline.innerText = 'You look nice today';
-            document.ping.appendChild(tagline);
-            if (cooldown !== undefined) {
-              cooldown = window.setTimeout(enablePing, 300000);
+          request.onreadystatechange = function() {
+            if (xhttp.readyState == 4 && xhttp.status == 200)
+              disablePing();
+              document.ping.innerHTML = '<h2 class="page-title">Message sent</h2>';
+              var tagline = document.createElement('label');
+              tagline.innerText = 'You look nice today';
+              document.ping.appendChild(tagline);
+              if (cooldown !== undefined) {
+                cooldown = window.setTimeout(enablePing, 300000);
+              }
+            } else {
+              var pingError = document.createElement('label');
+              tagline.innerText = 'There was a problem. Oh well';
+              tagline.id = 'pingError';
+              tagline.classList.add('error');
+              document.ping.appendChild(tagline);
             }
             setTimeout(hidePingDialog, 1650);
           };
