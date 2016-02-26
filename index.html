@@ -74,7 +74,7 @@
           if (ev){
             ev.preventDefault();
           }
-          var msg = document.ping.message;
+          var msg = { 'form': { 'message': document.ping.message }};
           console.log('msg', msg);
           var data = JSON.stringify(msg);
           console.log(data);
