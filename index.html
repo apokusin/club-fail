@@ -74,8 +74,10 @@
           if (ev){
             ev.preventDefault();
           }
-
-          var data = JSON.stringify(document.ping.message);
+          var msg = document.ping.message;
+          console.log('msg', msg);
+          var data = JSON.stringify(msg);
+          console.log(data);
           if (!data) {
             return false;
           }
@@ -83,7 +85,6 @@
           request.open('POST', 'http://198.199.94.245:22222', true);
 
           // send the collected data as JSON
-          console.log(data);
           request.send(data);
           request.onreadystatechange = function() {
             if (request.readyState == 4 && request.status == 200) {
