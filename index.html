@@ -100,10 +100,10 @@
               }
             } else {
               var pingError = document.createElement('label');
-              tagline.innerText = 'There was a problem. Oh well';
-              tagline.id = 'pingError';
-              tagline.classList.add('error');
-              document.ping.appendChild(tagline);
+              pingError.innerText = 'There was a problem. Oh well';
+              pingError.id = 'pingError';
+              pingError.classList.add('error');
+              document.ping.appendChild(pingError);
             }
             setTimeout(hidePingDialog, 1650);
           };
