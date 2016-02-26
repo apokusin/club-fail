@@ -75,7 +75,7 @@
             ev.preventDefault();
           }
 
-          var data = JSON.stringify({message: document.ping.message});
+          var data = JSON.stringify(document.ping.message);
           if (!data) {
             return false;
           }
