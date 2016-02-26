@@ -11,10 +11,11 @@
     <header>
       <section class="info-area">
         <a href="/" class="current">
-          <h1 class="title">Club fail</h1>
+          <h1 class="title">Club</h1>
           <p class="subtitle">no douchebaggery</p>
         </a>
       </section>
+      <button class="ping-dialog-button" id="showPingDialogButton">Ping Artur</button>
       <section class="links-area">
         <nav>
           <div class="global-info">
@@ -28,5 +29,95 @@
       </section>
     </header>
     <iframe class="map-area" src="http://minecraft-host.club.fail:8123" />
-  </iframe>
+    </iframe>
+  </div>
+  <div class="ping-dialog" id="pingDialog">
+    <button class="dialog-close-button" id="hidePingDialogButton">Nevermind</button>
+    <form name="ping" action="">
+      <h2 class="page-title">What's up?</h2>
+      <label for="message">Message is optional</label>
+      <textarea placeholder="Server is melting…" name="message" type="text" maxlength="150" rows="1"></textarea>
+      <button name="submit" type="submit" class="ping-submit-button">Ping</button>
+    </form>
+  </div>
+  <script>
+    function init() {
+      var cooldown;
+
+      var showPingDialogButton = document.getElementById('showPingDialogButton');
+      var hidePingDialogButton = document.getElementById('hidePingDialogButton');
+      var pingDialog = document.getElementById('pingDialog');
+
+      if (showPingDialogButton && hidePingDialogButton && pingDialog) {
+        function disablePing() {
+          showPingDialogButton.classList.remove('ready');
+        }
+
+        function enablePing() {
+          showPingDialogButton.classList.add('ready');
+        }
+
+        function showPingDialog() {
+          pingDialog.classList.toggle('ready');
+          setTimeout(activatePingInputs, 750); // delay by amount of time transition requires
+          function activatePingInputs() {
+            document.ping.message.focus();
+            document.ping.submit.classList.add('ready');
+          }
+        }
+
+        function hidePingDialog() {
+          pingDialog.classList.toggle('ready');
+        }
+
+        function pingArtur(ev) {
+          if (ev){
+            ev.preventDefault();
+          }
+
+          var msg = { message: document.ping.message.value || 'ping'};
+          var data = JSON.stringify(msg);
+          if (!data) {
+            return false;
+          }
+          var request = new XMLHttpRequest();
+          request.open('POST', 'http://requestb.in/p0weddp0', true);
+          // request.open('POST', 'http://198.199.94.245:22222', true);
+          request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
+          // send the collected data as JSON
+          console.log(data);
+          request.send(data);
+          disablePing();
+
+          request.onloadend = function (e) {
+            document.ping.innerHTML = '<h2 class="page-title">Message sent</h2>';
+            var tagline = document.createElement('label');
+            tagline.innerText = 'You look nice today';
+            document.ping.appendChild(tagline);
+            if (cooldown !== undefined) {
+              cooldown = window.setTimeout(enablePing, 300000);
+            }
+            setTimeout(hidePingDialog, 1650);
+          };
+          return false;
+        }
+
+        function handleKeyPress(event) {
+          if (!event.altKey && (event.which == 13 || event.keyCode == 13)) {
+              event.preventDefault();
+              pingArtur();
+              return false;
+          }
+        }
+        // setup event listeners
+        showPingDialogButton.addEventListener('click', showPingDialog);
+        hidePingDialogButton.addEventListener('click', hidePingDialog);
+        document.ping.message.addEventListener('keydown', handleKeyPress);
+        document.ping.addEventListener('submit', pingArtur);
+        enablePing();
+      }
+    }
+    window.onload = init;
+  </script>
 </body>
