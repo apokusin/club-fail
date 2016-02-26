@@ -75,7 +75,7 @@
             ev.preventDefault();
           }
 
-          var data = new FormData(document.ping);
+          var data = JSON.stringify({message: document.ping.message});
           if (!data) {
             return false;
           }
@@ -98,14 +98,14 @@
               if (cooldown !== undefined) {
                 cooldown = window.setTimeout(enablePing, 300000);
               }
+              setTimeout(hidePingDialog, 1650);
             } else {
               var pingError = document.createElement('label');
               pingError.innerText = 'There was a problem. Oh well';
               pingError.id = 'pingError';
               pingError.classList.add('error');
-              document.ping.appendChild(pingError);
+              document.ping.message.appendChild(pingError);
             }
-            setTimeout(hidePingDialog, 1650);
           };
           return false;
         }
