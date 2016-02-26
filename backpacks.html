@@ -3,133 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Club</title>
-  <style>
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    font-family: sans-serif;
-  }
-  .content-container {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .content-container > header {
-    width: 100%;
-    height: 56px;
-  }
-
-  .info-area {
-    display: block;
-    height: 24px;
-    width: auto;
-    position: absolute;
-    left: 1em;
-    top: 8px;
-  }
-
-  .info-area .title {
-    background: url('club-fail-logo.png') 0 center no-repeat;
-    background-size: 100% ;
-    color: transparent;
-    font-size: 0;
-    height: 24px;
-    opacity: 1;
-    display: block;
-  }
-  .info-area .subtitle {
-    margin-top: 3px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    text-align: center;
-  }
-
-  .links-area {
-    display: block;
-    width: 50%;
-    min-width: 300px;
-    height: 56px;
-    position: absolute;
-    right: 0;
-    text-align: right;
-  }
-
-  .links-area nav {
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  nav a {
-    line-height: 56px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 10px;
-    letter-spacing: 0.1em;
-    margin-right: 2em;
-  }
-
-  nav a.current {
-    text-decoration: none;
-  }
-
-  .map-area {
-    height: 100%;
-    display: block;
-    border: none;
-    width: 100%;
-    height: 100%;
-  }
-
-  .content-area {
-    padding: 2em 1em;
-  }
-
-  .content-area .page-title {
-    font-size: 3em;
-    font-weight: 200;
-    margin-top: 0.25em;
-    margin-bottom: 0.5em;
-    color: #aaa;
-  }
-
-  .content-area p {
-    color: #444;
-    line-height: 1.4em;
-    border-radius: 3px;
-  }
-  .content-area .subtitle {
-    font-size: 1.2em;
-    line-height: 1.3em;
-    margin-bottom: 1em;
-    opacity: #666;
-  }
-
-  .content-area a {
-    display: inline-block;
-    font-weight: bold;
-    font-size: 12px;
-    padding: 1em;
-    border: 1px solid #eee;
-    background: #fff;
-  }
-
-  .content-area .content-links {
-    margin-top: 1em;
-  }
-
-  </style>
+  <title>Fail</title>
+  <link rel="stylesheet"  href="styles.css"/>
 </head>
 <body>
   <div class="content-container">
@@ -142,20 +17,79 @@
       </section>
       <section class="links-area">
         <nav>
+          <div class="global-info">
+            Server IP Address: <input readonly type="text" onClick="this.select();" class="selectable-input" value="104.238.226.162"></input>
+          </div>
           <a href="/">Map</a>
           <a class="current" href="backpacks">Backpacks</a>
           <a href="map-markers">Map Markers</a>
+          <a href="villages">Villages</a>
         </nav>
       </section>
     </header>
     <div class="content-area">
       <h2 class="page-title">Backpacks</h2>
-      <p class="subtitle">A plugin allows creation and use of backpacks.</p>
-      <p>A backpack takes the place of your chestplate.</p>
-      <p>Backpacks can be accessed by creating and using a key.</p>
-
+      <p class="subtitle">Use backpacks for extra portable storage</p>
+      <p>Craft a backpack, then place it in your chestplate armor slot.</p>
+      <p>Access your backpack by crafting and using a key.</p>
+      <div class="content-well">
+        <div class="content-division">
+          <p>Backpack Key</p>
+          <img height="100" src="http://i.imgur.com/g9IcNaF.png"/>
+          <ul class="content-list">
+            <li>
+                <img height="18" width="18" src="http://hydra-media.cursecdn.com/minecraft.gamepedia.com/3/33/Feather.png" />
+                <a href="http://minecraft.gamepedia.com/Feather" target="_blank">Feather</a>
+            </li>
+            <li>
+                <img height="18" width="18" src="http://hydra-media.cursecdn.com/minecraft.gamepedia.com/0/0a/Iron_Ingot.png" />
+                <a href="http://minecraft.gamepedia.com/Iron_Ingot" target="_blank">Iron Ingot</a>
+            </li>
+          </ul>
+        </div>
+        <div class="content-division">
+          <p>Small Backpack</p>
+          <img height="100" src="http://i.imgur.com/wtpRTHD.png"/>
+          <ul class="content-list">
+            <li>
+                <img height="18" width="18" src="http://hydra-media.cursecdn.com/minecraft.gamepedia.com/3/3d/Leather.png" />
+                <a href="http://minecraft.gamepedia.com/Leather" target="_blank">Leather</a>
+            </li>
+          </ul>
+        </div>
+        <div class="content-division">
+          <p>Large Backpack</p>
+          <img height="100" src="http://i.imgur.com/qWtGrCU.png"/>
+          <ul class="content-list">
+            <li>
+                <img height="18" width="18" src="http://hydra-media.cursecdn.com/minecraft.gamepedia.com/3/3d/Leather.png" />
+                <a href="http://minecraft.gamepedia.com/Leather" target="_blank">Leather</a>
+            </li>
+            <li>
+                <img height="18" width="18" src="http://pokus.in/1fYQN.png" />
+                <a href="http://minecraft.gamepedia.com/Chest" target="_blank">Chest</li>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="content-division">
+          <p>Ender Backpack</p>
+          <img height="100" src="http://i.imgur.com/Otvf7z8.png"/>
+          <ul class="content-list">
+            <li>
+                <img height="18" width="18" src="http://hydra-media.cursecdn.com/minecraft.gamepedia.com/3/3d/Leather.png" />
+                <a href="http://minecraft.gamepedia.com/Leather" target="_blank">Leather</a>
+            </li>
+            <li>
+                <img height="18" width="18" src="http://pokus.in/kDDs.png" />
+                <a href="http://minecraft.gamepedia.com/Ender_Chest" target="_blank">Ender Chest</li>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div style="clear: both;"></div>
+      </div>
       <div class="content-links">
-        <a target="_blank" href="http://dev.bukkit.org/bukkit-plugins/backpack-item/#w-showcases">Learn how to use backpacks</a>
         <a target="_blank" href="http://dev.bukkit.org/bukkit-plugins/backpack-item/pages/screenshots/">Screenshots</a>
 
       </div>
