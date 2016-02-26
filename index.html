@@ -75,8 +75,7 @@
             ev.preventDefault();
           }
           var msg = new FormData();
-          msg.append('message', document.ping.message);
-
+          msg.append('message', document.ping.message.value);
           var data = JSON.stringify(msg);
           console.log(data);
           if (!data) {
