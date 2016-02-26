@@ -107,7 +107,7 @@ nav a.current {
   padding: 2em 1em;
 }
 
-.content-area .page-title {
+.page-title {
   font-size: 3em;
   font-weight: 200;
   margin-top: 0.25em;
@@ -176,4 +176,196 @@ nav a.current {
   float: left;
   margin-right: 1em;
   margin-bottom: 2em;
+}
+
+/* Ping Button */
+
+.ping-dialog-button {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  left: 160px;
+  top: 0;
+  width: 130px;
+  height: 56px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: blue;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  text-decoration: underline;
+  line-height: 56px;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in;
+  -moz-transition: all 1s ease-in;
+  -ms-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.ping-dialog-button.ready {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 2s ease-out;
+  -moz-transition: all 2s ease-out;
+  -ms-transition: all 2s ease-out;
+  -o-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+}
+
+.ping-dialog {
+  overflow: hidden;
+  position: fixed;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  visibility: hidden;
+  overflow: hidden;
+  text-align: center;
+  background: white;
+  -webkit-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
+  -moz-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
+  -ms-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
+  -o-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
+  transition: visibility 0s linear 500ms, opacity 500ms ease-in;
+}
+
+.ping-dialog.ready {
+  opacity: 1;
+  visibility: visible;
+  background: white;
+  color: rgba(0,0,0,0.54);
+  z-index: 99;
+  -webkit-transition: opacity 500ms ease-out;
+  -moz-transition: opacity 500ms ease-out;
+  -ms-transition: opacity 500ms ease-out;
+  -o-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+  transition-delay: 0s;
+}
+
+.ping-dialog.waiting form::after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  content: '';
+  background: white;
+  opacity: 0.5;
+  -webkit-transition: all 2s cubic-bezier(.09,.65,.37,.99);
+  -moz-transition: all 2s cubic-bezier(.09,.65,.37,.99);
+  -ms-transition: all 2s cubic-bezier(.09,.65,.37,.99);
+  -o-transition: all 2s cubic-bezier(.09,.65,.37,.99);
+  transition: all 2s cubic-bezier(.09,.65,.37,.99);
+}
+
+.ping-dialog form {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.ping-dialog form label {
+  display:block;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.ping-dialog form textarea {
+    margin-top: 1.5em;
+    border: none;
+    border-bottom: 2px solid rgba(0,0,0,0.08);
+    padding: 1em;
+    margin-right: 1em;
+    font-size: 24px;
+    color: #313131;
+    font-weight: normal;
+    outline: 0;
+    width: 75%;
+    background: transparent;
+    -webkit-transition: border-color 1s linear;
+    -moz-transition: border-color 1s linear;
+    -ms-transition: border-color 1s linear;
+    -o-transition: border-color 1s linear;
+    transition: border-color 1s linear;
+}
+
+.ping-dialog form textarea:focus {
+  border-bottom: 2px solid #0000ee;
+  -webkit-transition: border-color 1s linear;
+  -moz-transition: border-color 1s linear;
+  -ms-transition: border-color 1s linear;
+  -o-transition: border-color 1s linear;
+  transition: border-color 1s linear;
+}
+
+.ping-dialog form button {
+  padding: 1em;
+  font-size: 24px;
+  border: none;
+  background: transparent;
+  color: rgba(0,0,0,0.1);
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-transition: color 1s linear;
+  -moz-transition: color 1s linear;
+  -ms-transition: color 1s linear;
+  -o-transition: color 1s linear;
+  transition: color 1s linear;
+  outline: 0;
+  cursor: pointer;
+}
+
+.ping-dialog form button.ready {
+  color: #0000ee;
+  text-decoration: underline;
+  -webkit-transition: color 1s linear;
+  -moz-transition: color 1s linear;
+  -ms-transition: color 1s linear;
+  -o-transition: color 1s linear;
+  transition: color 1s linear;
+}
+
+.ping-dialog .dialog-close-button {
+  border: none;
+  cursor: pointer;
+  display: block;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 96px;
+  text-align: center;
+  background: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  color: #0000ee;
+  text-decoration: underline;
+  letter-spacing: 0.01em;
+  z-index: 100;
+  outline: 0;
 }
