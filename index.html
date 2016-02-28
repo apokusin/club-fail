@@ -72,7 +72,6 @@
       }
 
       function hidePingDialog() {
-        document.ping.submit.classList.remove('ready');
         pingDialog.classList.toggle('ready');
       }
 
@@ -100,10 +99,6 @@
             var tagline = document.createElement('label');
             tagline.innerText = 'You look nice today';
             document.ping.appendChild(tagline);
-
-            if (cooldown !== undefined) {
-              cooldown = window.setTimeout(enablePing, 300000);
-            }
             setTimeout(hidePingDialog, 1650);
           } else {
             var pingError = document.createElement('label');
