@@ -37,7 +37,7 @@
   <div class="ping-dialog" id="pingDialog">
     <button class="dialog-close-button" id="hidePingDialogButton">Nevermind</button>
     <form name="ping" action="">
-      <h2 id="dialog-title" class="page-title">What&rsquo;s up?</h2>
+      <h2 class="page-title">What&rsquo;s up?</h2>
       <label for="message">You look nice today</label>
       <textarea placeholder="Server is melting…" name="message" type="text" maxlength="150" rows="1"></textarea>
       <button name="submit" type="submit" class="ping-submit-button">Send notification</button>
@@ -76,8 +76,6 @@
       }
 
       function pingArtur(ev) {
-        var title = document.getElementById('dialog-title');
-        title.innerText = 'Sending…';
         if (ev) {
           ev.preventDefault();
         }
@@ -95,9 +93,12 @@
         request.onreadystatechange = function() {
           if (request.readyState == 4 && request.status == 200) {
             disablePing();
-            if (title) {
-              title.innerText = 'Message sent';
-            }
+
+            document.ping.innerHTML = '<h2 class="page-title">Message sent</h2>';
+
+            var tagline = document.createElement('label');
+            tagline.innerText = 'Have a nice day';
+            document.ping.appendChild(tagline);
             setTimeout(hidePingDialog, 1650);
           } else {
             var pingError = document.createElement('label');
