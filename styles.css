@@ -110,6 +110,11 @@ nav a.current {
   bottom: 0;
 }
 
+.map-area.maintenance {
+  text-align: center;
+  padding-top: 20%;
+}
+
 .content-area {
   padding: 2em 1em;
 }
@@ -303,9 +308,10 @@ nav a.current {
     color: #ee0000;
 }
 
-.ping-dialog form label {
+label {
   display:block;
   font-size: 14px;
+  color: rgba(0,0,0,0.54);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: bold;
