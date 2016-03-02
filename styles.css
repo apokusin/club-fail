@@ -90,6 +90,14 @@ nav a {
   margin-right: 2em;
 }
 
+a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  margin-right: 2em;
+}
+
 nav a.current {
   text-decoration: none;
 }
