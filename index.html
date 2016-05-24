@@ -46,6 +46,7 @@
   <script>
   function init() {
     var cooldown;
+    ga('send', 'event', 'State changes', 'Page', 'Initialize');
 
     var showPingDialogButton = document.getElementById('showPingDialogButton');
     var hidePingDialogButton = document.getElementById('hidePingDialogButton');
@@ -53,17 +54,20 @@
 
     if (showPingDialogButton && hidePingDialogButton && pingDialog) {
       function disablePing() {
+        ga('send', 'event', 'State changes', 'Ping button', 'Button disabled');
         showPingDialogButton.classList.remove('ready');
         showPingDialogButton.disabled = true;
       }
 
       function enablePing() {
+        ga('send', 'event', 'State changes', 'Ping button', 'Button enabled');
         showPingDialogButton.disabled = false;
         showPingDialogButton.classList.add('ready');
       }
 
 
       function showPingDialog() {
+        ga('send', 'event', 'State changes', 'Ping button', 'Show dialog');
         pingDialog.classList.toggle('ready');
         setTimeout(function() {
           document.ping.message.focus();
@@ -72,6 +76,7 @@
       }
 
       function hidePingDialog() {
+        ga('send', 'event', 'State changes', 'Ping button', 'Hide dialog');
         pingDialog.classList.toggle('ready');
       }
 
@@ -80,8 +85,10 @@
           ev.preventDefault();
         }
         var msg = encodeURIComponent('message') + '=' + encodeURIComponent(document.ping.message.value);
+        ga('send', 'event', 'Actions', 'Ping button', 'Message constructed');
 
         if (!msg) {
+          ga('send', 'event', 'State changes', 'Ping button', 'Message failed to construct');
           return false;
         }
         var request = new XMLHttpRequest();
@@ -92,6 +99,7 @@
 
         request.onreadystatechange = function() {
           if (request.readyState == 4 && request.status == 200) {
+            ga('send', 'event', 'Actions', 'Ping button', 'Message sent');
             disablePing();
 
             document.ping.innerHTML = '<h2 class="page-title">Message sent</h2>';
@@ -101,6 +109,7 @@
             document.ping.appendChild(tagline);
             setTimeout(hidePingDialog, 1650);
           } else {
+            ga('send', 'event', 'Actions', 'Ping button', 'Message sending error');
             var pingError = document.createElement('label');
             pingError.innerText = 'There was a problem. Oh well';
             pingError.id = 'pingError';
