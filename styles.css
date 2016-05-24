@@ -22,6 +22,10 @@ body {
   top: 8px;
 }
 
+.info-area a {
+  display: block;
+}
+
 .info-area .title {
   background: url('club-fail-logo.svg') 0 center no-repeat;
   background-size: 100% ;
