@@ -22,6 +22,10 @@ body {
   top: 8px;
 }
 
+.info-area a {
+  display: block;
+}
+
 .info-area .title {
   background: url('club-fail-logo.svg') 0 center no-repeat;
   background-size: 100% ;
@@ -50,6 +54,13 @@ body {
   right: 0;
   text-align: right;
 }
+
+@media screen and (max-width: 550px) {
+  .links-area {
+    display: none;
+  }
+}
+
 
 .global-info {
   margin-top: 10px;
@@ -83,6 +94,14 @@ nav a {
   margin-right: 2em;
 }
 
+a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  margin-right: 2em;
+}
+
 nav a.current {
   text-decoration: none;
 }
@@ -101,6 +120,11 @@ nav a.current {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.map-area.maintenance {
+  text-align: center;
+  padding-top: 20%;
 }
 
 .content-area {
@@ -218,6 +242,15 @@ nav a.current {
   transition: all 2s ease-out;
 }
 
+@media screen and (max-width: 550px) {
+  .ping-dialog-button {
+    right: 0;
+    left: initial;
+    margin: 0;
+  }
+}
+
+
 .ping-dialog {
   overflow: hidden;
   position: fixed;
@@ -283,9 +316,15 @@ nav a.current {
   margin: 0 auto;
 }
 
-.ping-dialog form label {
+.ping-dialog form label.error {
+    color: #ee0000;
+}
+
+label {
   display:block;
   font-size: 14px;
+  line-height: 18px;
+  color: rgba(0,0,0,0.54);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: bold;
