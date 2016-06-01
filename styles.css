@@ -15,11 +15,11 @@ body {
 
 .info-area {
   display: block;
-  height: 24px;
-  width: auto;
+  height: 36px;
+  min-width: 128px;
   position: absolute;
   left: 1em;
-  top: 8px;
+  top: 9px;
 }
 
 .info-area a {
@@ -27,15 +27,21 @@ body {
 }
 
 .info-area .title {
-  background: url('club-fail-logo.svg') 0 center no-repeat;
+  background: url('club-f.svg') 0 center no-repeat;
   background-size: 100% ;
   color: transparent;
   font-size: 0;
-  height: 24px;
+  height: 36px;
   opacity: 1;
   display: block;
 }
-.info-area .subtitle {
+
+.info-area .title:hover,
+.info-area .title:focus {
+  background-image: url('club-f-blue.svg');
+}
+
+/* .info-area .subtitle {
   margin-top: 3px;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -43,7 +49,7 @@ body {
   font-size: 10px;
   letter-spacing: 0.1em;
   text-align: center;
-}
+} */
 
 .links-area {
   display: block;
@@ -102,8 +108,19 @@ a {
   margin-right: 2em;
 }
 
-nav a.current {
+nav a:link {
+  color: #3C40FC;
+}
+
+nav a.current:link,
+nav a.current:visited {
   text-decoration: none;
+  color: black;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: #3C40FC;
 }
 
 .map-area {
@@ -167,17 +184,35 @@ nav a.current {
   background: #fff;
 }
 
+
 .content-area .content-links {
   margin-top: 1em;
 }
 
-.content-area .content-well {
+.content-well {
   padding: 2em;
   margin-top: 3em;
   background: #fafafa;
   border: 1px solid #ebebeb;
   font-size: 0.8em;
   font-weight: 600;
+}
+
+.content-well-light {
+  padding: 2em;
+  background: #fefefe;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+
+.content-well-light p {
+  font-weight: normal;
+}
+
+.content-well-light h2 {
+  line-height: 1.75em;
 }
 
 .content-area ul.content-list {
@@ -202,6 +237,33 @@ nav a.current {
   margin-bottom: 2em;
 }
 
+.content-division-third {
+  float: left;
+  padding-right: 2em;
+  box-sizing: border-box;
+  padding-bottom: 1em;
+  max-width: 33.333%;
+  margin-top: 2em;
+}
+
+.content-division-half {
+  float: left;
+  padding-right: 2em;
+  box-sizing: border-box;
+  padding-bottom: 1em;
+  max-width: 50%;
+  margin-top: 2em;
+}
+
+@media screen and (max-width: 550px) {
+  .content-division-third,
+  .content-division-half {
+    max-width: 100%;
+    padding-right: 0;
+    float: none;
+  }
+}
+
 /* Ping Button */
 
 .ping-dialog-button {
@@ -215,7 +277,7 @@ nav a.current {
   border: none;
   border-radius: 5px;
   background: transparent;
-  color: blue;
+  color: #3C40FC;
   text-transform: uppercase;
   font-weight: bold;
   margin: 0 auto;
