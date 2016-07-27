@@ -235,6 +235,13 @@ nav a:visited {
   box-shadow: 0px 3px 6px rgba(0,0,0,0.03);
 }
 
+.content-area.content-area-newsbox-callout {
+  margin-bottom: 1em;
+  padding: 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
 .newsbox-options {
   list-style-type: none;
 }
@@ -243,6 +250,26 @@ nav a:visited {
   display: block;
 }
 
+.newsbox-option.newsbox-option-callout {
+  background: #3C40FC;
+  color: white;
+
+}
+
+.newsbox-option.newsbox-option-callout a {
+  color: white;
+  border: none;
+}
+
+
+.newsbox-option.newsbox-option-callout .subtext {
+  color: white;
+  font-weight: normal;
+}
+
+.newsbox-option.newsbox-option-callout a:hover {
+  background: #2C40FC;
+}
 
 .newsbox-option a {
   text-decoration: none;
@@ -414,6 +441,49 @@ nav a:visited {
   }
 }
 
+.join-dialog {
+  overflow: auto;
+  position: fixed;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  visibility: hidden;
+  overflow: hidden;
+  background: white;
+  -webkit-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
+  -moz-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
+  -ms-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
+  -o-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
+  transition: visibility 0s linear 500ms, opacity 500ms ease-in;
+}
+
+
+.join-dialog.ready {
+  opacity: 1;
+  visibility: visible;
+  background: white;
+  color: rgba(0,0,0,0.54);
+  z-index: 99;
+  -webkit-transition: opacity 500ms ease-out;
+  -moz-transition: opacity 500ms ease-out;
+  -ms-transition: opacity 500ms ease-out;
+  -o-transition: opacity 500ms ease-out;
+  transition: opacity 500ms ease-out;
+  transition-delay: 0s;
+}
+
+
 
 .ping-dialog {
   overflow: hidden;
@@ -571,4 +641,25 @@ label {
   letter-spacing: 0.01em;
   z-index: 100;
   outline: 0;
+}
+
+.button {
+  background: white;
+  color: #0000ee;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  cursor: pointer;
+  outline: 0;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  box-shadow: 0px 3px 6px rgba(0,0,0,0.03);
+}
+
+.button:hover,
+.button:focus {
+  background: #fafafa;
+  /* box-shadow: 0px 3px 4px rgba(0,0,0,0.09); */
+  /* border-color: #ccc; */
 }

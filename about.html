@@ -53,25 +53,17 @@
         </li>
       </ul>
     </div>
-    <div class="content-area content-well-light">
-      <h2 style="margin-bottom: 0.5em">Interested in joining?</h2>
-      <p>We have a whitelist and three simple member levels:</p>
-      <div class="content-division content-division-third">
-        <h3 style="color: #999; margin-bottom: 0.25em">Guest</h3>
-        <p style="color: #999; font-size: 0.9em">Just a visitor and can not build or destroy. Apply to join and we’ll give you a free Guest pass to check out the server.</p>
-      </div>
-      <div class="content-division content-division-third">
-        <h3 style="color: #3C40FC; margin-bottom: 0.25em">Member</h3>
-        <p>One of the cool kids. Members can build with minimal restrictions as long as they follow the rules.</p>
-        <p><a style="display: inline-block; background: #3C40FC; color: white; padding: 1em 2em; border-radius: 3px; margin-top: 1em" href="http://goo.gl/forms/y8dFcoyVmIYD6tJP2" target="_blank" onclick="ga('send', 'event', 'Application Form', 'button-clicked')">
-          Apply to join
+    <div class="content-area content-area-newsbox-callout">
+      <div class="newsbox-options">
+        <div class="newsbox-option newsbox-option-callout">
+          <a href="http://goo.gl/forms/y8dFcoyVmIYD6tJP2" target="_blank" onclick="ga('send', 'event', 'Application Form', 'button-clicked')">
+            <div class="newsbox-option-content">
+              <h3 class="headline">Join the club</h3>
+              <p class="subtext">Fill out a simple form. You'll also get a <em>FREE</em> carrot!</p>
+            </div>
           </a>
+        </div>
       </div>
-      <div class="content-division content-division-third">
-        <h3 style="color: #FFAA00; margin-bottom: 0.25em">Moderator</h3>
-        <p style="font-size: 0.9em">We currently have two moderators: Artur (playfulcyanide) and Tyler (RonaldFoose). One of them is way cooler than the other—try to figure out who is who but don't guess wrong… </p>
-      </div>
-      <div style="clear: both;"></div>
     </div>
     <div class="content-area">
       <h2 style="line-height: 2em; margin-top: 1.5em; margin-bottom: 0.25em; color: #aaa; font-weight: normal">Who are the moderators?</h2>
@@ -84,6 +76,36 @@
       <div class="content-division-half">
         <h3 style="line-height: 1.75em">Artur</h3>
         <p style="color: #333">He lives in California and doesn’t do much.</p>
+      </div>
+      <div>
+        <button class="button join-dialog-button" id="showJoinDialogButton">What are the other ranks?</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="join-dialog" id="joinDialog">
+    <div class="content-area">
+      <button class="button dialog-close-button" id="hideJoinDialogButton">&laquo; Back</button>
+      <div class="content-area">
+        <h2 class="page-title">It's simple</h2>
+        <p>We have a whitelist and three simple member levels:</p>
+        <div class="content-division content-division-third">
+          <h3 style="color: #999; margin-bottom: 0.25em">Guest</h3>
+          <p style="color: #999; font-size: 0.9em">Just a visitor and can not build or destroy. Apply to join and we’ll give you a free Guest pass to check out the server.</p>
+        </div>
+        <div class="content-division content-division-third">
+          <h3 style="color: #3C40FC; margin-bottom: 0.25em">Member</h3>
+          <p>One of the cool kids. Members can build with minimal restrictions as long as they follow the rules.</p>
+          <p><a style="display: inline-block; background: #3C40FC; color: white; padding: 1em 2em; border-radius: 3px; margin-top: 1em" href="http://goo.gl/forms/y8dFcoyVmIYD6tJP2" target="_blank" onclick="ga('send', 'event', 'Application Form', 'button-clicked')">
+            Apply to join
+            </a>
+          </p>
+        </div>
+        <div class="content-division content-division-third">
+          <h3 style="color: #FFAA00; margin-bottom: 0.25em">Moderator</h3>
+          <p style="font-size: 0.9em">We currently have two moderators: Artur (playfulcyanide) and Tyler (RonaldFoose). One of them is way cooler than the other—try to figure out who is who but don't guess wrong… </p>
+        </div>
+        <div style="clear: both;"></div>
       </div>
     </div>
   </div>
@@ -102,5 +124,29 @@
 
   ga('create', 'UA-9559262-25', 'auto');
   ga('send', 'pageview');
+  </script>
+  <script>
+  function init() {
+    var showJoinDialogButton = document.getElementById('showJoinDialogButton');
+    var hideJoinDialogButton = document.getElementById('hideJoinDialogButton');
+    var joinDialog = document.getElementById('joinDialog');
+
+    if (showJoinDialogButton && hideJoinDialogButton && joinDialog) {
+      function showJoinDialog() {
+        ga('send', 'event', 'Join interest', 'invoke');
+        joinDialog.classList.toggle('ready');
+      }
+
+      function hideJoinDialog() {
+        ga('send', 'event', 'Join interest', 'dismiss');
+        joinDialog.classList.toggle('ready');
+      }
+
+      // setup event listeners
+      showJoinDialogButton.addEventListener('click', showJoinDialog);
+      hideJoinDialogButton.addEventListener('click', hideJoinDialog);
+    }
+  };
+  init();
   </script>
 </body>
