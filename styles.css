@@ -137,6 +137,11 @@ nav a:visited {
 
 .content-area {
   padding: 2em 1em;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+
 }
 
 .page-title {
@@ -191,9 +196,10 @@ nav a:visited {
 
 .content-well-light {
   padding: 2em;
-  background: #fefefe;
-  border-top: 1px solid #ebebeb;
-  border-bottom: 1px solid #ebebeb;
+  /* background: #f7f7f7; */
+  /* border-top: 1px dotted #000; */
+  border: 1px solid #ddd;
+  border-radius: 3px;
   font-size: 1em;
   line-height: 1.4em;
 }
@@ -223,35 +229,31 @@ nav a:visited {
 }
 
 .content-area .content-well .content-division {
-  float: left;
-  margin-right: 1em;
-  margin-bottom: 2em;
+  /* margin-right: 1em; */
+  /* margin-bottom: 2em; */
 }
 
 .content-division-third {
-  float: left;
-  padding-right: 2em;
+  /* float: left; */
+  /* padding-right: 2em; */
   box-sizing: border-box;
-  padding-bottom: 1em;
-  max-width: 33.333%;
+  border-top: 1px dotted #aaa;
+  padding-top: 2em;
   margin-top: 2em;
+  /* padding-bottom: 1em; */
+  /* max-width: 33.333%; */
+  /* margin-top: 2em; */
 }
 
 .content-division-half {
-  float: left;
-  padding-right: 2em;
-  box-sizing: border-box;
-  padding-bottom: 1em;
-  max-width: 50%;
-  margin-top: 2em;
 }
 
 @media screen and (max-width: 550px) {
   .content-division-third,
   .content-division-half {
-    max-width: 100%;
-    padding-right: 0;
-    float: none;
+  }
+  .content-well-light {
+    box-sizing: border-box;
   }
 }
 
