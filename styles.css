@@ -151,7 +151,22 @@ nav a:visited {
 
 .map-area.maintenance {
   text-align: center;
-  padding-top: 20%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  background: black url('pw_maze_black.png') top left repeat;
+  color: white;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+small {
+  font-weight: normal;
+  color: rgba(255,255,255,0.7);
 }
 
 .content-area {
