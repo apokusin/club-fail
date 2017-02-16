@@ -1,11 +1,29 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/*.a {
+ a: #0088f9;
+ b: #8400ff;
+ c: #fcca45;
+ d: #e21640;
+}*/
+
+
+html {
+  background: #8400ff;
+  height: 100%;
 }
 
 body {
   font-family: sans-serif;
   font-size: 16px;
+  background: #0088f9;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
 }
 
 .flex {
@@ -14,51 +32,23 @@ body {
 
 .content-container > header {
   width: 100%;
-  height: 56px;
-  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  min-height: 56px;
 }
 
-.header-with-map {
-  background: black;
+.header nav  {
+  display: flex;
+  align-items: center;
 }
-
-.info-area {
-  display: block;
-  height: 36px;
-  min-width: 128px;
-  position: absolute;
-  left: 1em;
-  top: 9px;
-}
-
-.info-area a {
-  display: block;
-}
-
-.info-area .title {
-  background: url('club-f-blue.svg') 0 center no-repeat;
-  background-size: 100% ;
-  color: transparent;
-  font-size: 0;
-  height: 36px;
-  opacity: 1;
-  display: block;
-}
-
-.info-area .title:hover,
-.info-area .title:focus {
-  background-image: url('club-f.svg');
-}
-
 
 .links-area {
-  display: block;
-  width: 50%;
-  min-width: 300px;
-  height: 56px;
-  position: absolute;
-  right: 0;
-  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 1rem;
 }
 
 @media screen and (max-width: 550px) {
@@ -68,85 +58,17 @@ body {
 }
 
 
-.global-info {
-  margin-top: 10px;
-  font-size: 12px;
-  margin-right: 1em;
-  opacity: 0.5;
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 100%;
 }
-
-.header-with-map .global-info {
-  opacity: 0.7;
-  color: white;
-}
-
-.global-info .selectable-input {
-  border: none;
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  font-family: inherit;
-  letter-spacing: 0.1em;
-  font-size: inherit;
-  width: 120px;
-}
-
-.links-area nav {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-nav a {
-  line-height: 30px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  margin-right: 2em;
-}
-
-a {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 10px;
-  letter-spacing: 0.1em;
-}
-
-
-.header-with-map nav a:link,
-.header-with-map nav a:visited {
-  color: white;
-}
-
-nav a:link {
-  color: #3C40FC;
-}
-
-nav a.current:link,
-nav a.current:visited {
-  text-decoration: none;
-  color: black;
-}
-
-nav a:visited {
-  text-decoration: none;
-  color: #3C40FC;
-}
-
 .map-area {
+  flex: 1;
   height: 100%;
-  box-sizing: border-box;
-  display: block;
-  border: none;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  padding-top: 56px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 .map-area.maintenance {
@@ -155,7 +77,7 @@ nav a:visited {
   align-content: center;
   justify-content: center;
   flex-direction: column;
-  background: black url('pw_maze_black.png') top left repeat;
+  background: black;
   color: white;
   font-weight: bold;
 }
@@ -170,48 +92,63 @@ small {
 }
 
 .content-area {
-  padding: 2em 1em;
+  padding: 2rem 1em;
   margin: 0 auto;
   max-width: 600px;
   width: 100%;
   box-sizing: border-box;
-
+  color: white;
 }
 
 .page-title {
   font-size: 3rem;
-  font-weight: 400;
-  margin-bottom: 0.5em;
-  color: #444;
-  letter-spacing: 0.03em;
+  margin-bottom: 2rem;
+  color: white;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+  border-bottom: 3px dotted rgba(255,255,255,0.5);
+  padding-bottom: 1em;
+}
+.page-title .enhance {
+  position: relative;
+  top: 16px;
+  padding-right: 0.2em;
 }
 
 .content-area p {
-  color: #444;
+  color: rgba(255,255,255,0.9);
   line-height: 1.4em;
   border-radius: 3px;
   margin-bottom: 1em;
+  font-size: 18px;
 }
 .content-area .subtitle {
-  font-size: 1.2em;
+  font-size: 1.4em;
   line-height: 1.3em;
   margin-bottom: 1em;
-  opacity: #666;
+  opacity: 1;
+  font-weight: bold;
 }
 
 .content-area a {
   display: inline-block;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #0088f9;
+  background: white;
+  border-radius: 120px;
+  padding: 0.3em 1em;
 }
 
 .content-area .content-links a {
   display: inline-block;
   font-weight: bold;
-  font-size: 12px;
   padding: 1em;
-  border: 1px solid #eee;
-  background: #fff;
+  border: none;
+  background: white;
+  border-radius: 100px;
 }
 
 
@@ -220,11 +157,11 @@ small {
 }
 
 .nav-options-area {
-  border: 1px solid #ddd;
   margin-bottom: 1.5rem;
   padding: 0;
   border-radius: 3px;
   box-shadow: 0px 3px 6px rgba(0,0,0,0.03);
+  /* background: rgba(255,255,255,0.1); */
 }
 
 .nav-options {
@@ -235,7 +172,7 @@ small {
 
 .nav-options a {
   box-sizing: border-box;
-  padding: 1.5rem;
+  padding: 0.7rem 1.2rem;
 }
 
 .nav-options a:hover {
@@ -243,11 +180,9 @@ small {
 }
 
 .content-area.content-area-newsbox {
-  border: 1px solid #ddd;
   margin-bottom: 1em;
   padding: 0;
   border-radius: 3px;
-  box-shadow: 0px 3px 6px rgba(0,0,0,0.03);
 }
 
 .content-area.content-area-newsbox-callout {
@@ -266,33 +201,36 @@ small {
 }
 
 .newsbox-option.newsbox-option-callout {
-  background: #3C40FC;
-  color: white;
-
+  background: white;
+  color: #e21640;
 }
 
 .newsbox-option.newsbox-option-callout a {
-  color: white;
+  color: #e21640;
   border: none;
 }
 
 
 .newsbox-option.newsbox-option-callout .subtext {
-  color: white;
+  color: inherit;
   font-weight: normal;
 }
 
 .newsbox-option.newsbox-option-callout a:hover {
-  background: #2C40FC;
+  transform: scale(1.1)
+  transition: transform 50ms ease-in;
 }
 
 .newsbox-option a {
   text-decoration: none;
   display: block;
   box-sizing: border-box;
-  padding: 1.5rem 2rem;
+  padding: 1.3rem;
   width: 100%;
-  border-top: 1px dotted #ccc;
+  transform: scale(1);
+  transition: transform 200ms ease-out;
+  border-radius: 0;
+  background: transparent;
 }
 
 .newsbox-option:first-child a {
@@ -300,43 +238,43 @@ small {
 }
 
 .newsbox-option a:hover {
-  background: #fafafa;
+  background: rgba(255,255,255,0.25);
 }
 
 
 .newsbox-option .headline {
   text-transform: none;
-  letter-spacing: 0.04em;
-  font-size: 1.25rem;
+  letter-spacing: 0.0em;
+  font-size: 1.45rem;
+  color: #e21640;
+  font-weight: bold;
 }
 
 .newsbox-option .subtext {
   margin-top: 0.5rem;
   margin-bottom: 0;
   text-transform: none;
-  letter-spacing: 0.075em;
-  font-weight: normal;
   font-family: sans-serif;
+  font-weight: normal;
 }
 
 
 .content-well {
   padding: 2em;
   margin-top: 3em;
-  background: #fafafa;
-  border: 1px solid #ebebeb;
+  background: rgba(255,255,255,0.1);
   font-size: 0.8em;
   font-weight: 600;
+  border-radius: 13px;
 }
 
 .content-well-light {
   padding: 2em;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 3px;
   font-size: 1em;
   line-height: 1.4em;
   box-shadow: 0px 3px 6px rgba(0,0,0,0.03);
-
 }
 
 .content-well-light p {
@@ -404,32 +342,70 @@ small {
   }
 }
 
-/* Ping Button */
-
-.header-with-map .ping-dialog-button {
-  color: white;
+.ip-caption {
+  opacity: 0.5;
+  font-weight: bold;
 }
 
-.ping-dialog-button {
-  cursor: pointer;
+#ip-value-input {
+  display: none;
+}
+
+/* Ping Button */
+
+.clipboard.clipboard--copied {
+  position: relative;
+  background-color: transparent !important;
+  color: white !important;
+  transition: all 50ms ease-out;
+  overflow: hidden;
+  border-radius: 100px;
+  outline: 0;
+}
+
+.enhance {
+  font-size: 1.5em;
+  padding-right: 0.5em;
+}
+
+.button-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.clipboard.clipboard--copied .button-content:after {
+  content: 'Copied!'
   display: block;
   position: absolute;
-  left: 160px;
   top: 0;
-  width: 130px;
-  height: 56px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 993;
+  background: ;
+  padding: 0.5rem 0.75rem;
+}
+
+.button {
+  cursor: pointer;
+  padding: 0 1rem;
+  height: 48px;
   border: none;
-  border-radius: 5px;
-  background: transparent;
-  color: #3C40FC;
+  border-radius: 100px;
+  background: white;
+  color: #0088f9;
   text-transform: uppercase;
   font-weight: bold;
-  margin: 0 auto;
-  letter-spacing: 0.05em;
-  text-decoration: underline;
-  line-height: 56px;
-  visibility: hidden;
-  opacity: 0;
+  letter-spacing: 0.025em;
+  margin-left: 0.5rem;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*   box-shadow: 0px 3px 0px rgba(0,0,0,0.25), 0px 0px 36px rgba(0,0,0,0.05); */
+  text-decoration: none;
   -webkit-transition: all 1s ease-in;
   -moz-transition: all 1s ease-in;
   -ms-transition: all 1s ease-in;
@@ -437,8 +413,14 @@ small {
   transition: all 1s ease-in;
 }
 
-.ping-dialog-button.ready {
-  display: block;
+.button--ping {
+  background: #8400ff;
+  color: white;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.button--ping.ready {
   visibility: visible;
   opacity: 1;
   -webkit-transition: all 2s ease-out;
@@ -475,7 +457,7 @@ small {
   align-items: center;
   visibility: hidden;
   overflow: hidden;
-  background: white;
+  background: #8400ff;
   -webkit-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
   -moz-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
   -ms-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
@@ -483,12 +465,19 @@ small {
   transition: visibility 0s linear 500ms, opacity 500ms ease-in;
 }
 
+.join-dialog .content-area p {
+  color: black;
+}
+
+.join-dialog .page-title {
+  color: black;
+}
 
 .join-dialog.ready {
   opacity: 1;
   visibility: visible;
   background: white;
-  color: rgba(0,0,0,0.54);
+  color: #dca0f3;
   z-index: 99;
   -webkit-transition: opacity 500ms ease-out;
   -moz-transition: opacity 500ms ease-out;
@@ -520,7 +509,7 @@ small {
   visibility: hidden;
   overflow: hidden;
   text-align: center;
-  background: white;
+  background: #8400ff;
   -webkit-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
   -moz-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
   -ms-transition: visibility 0s linear 500ms, opacity 500ms ease-in;
@@ -531,8 +520,8 @@ small {
 .ping-dialog.ready {
   opacity: 1;
   visibility: visible;
-  background: white;
-  color: rgba(0,0,0,0.54);
+  background: #8400ff;
+  color: #dca0f3;
   z-index: 99;
   -webkit-transition: opacity 500ms ease-out;
   -moz-transition: opacity 500ms ease-out;
@@ -549,7 +538,7 @@ small {
   bottom: 0;
   top: 0;
   content: '';
-  background: white;
+  background: #8400ff;
   opacity: 0.5;
   -webkit-transition: all 2s cubic-bezier(.09,.65,.37,.99);
   -moz-transition: all 2s cubic-bezier(.09,.65,.37,.99);
@@ -573,7 +562,7 @@ label {
   display:block;
   font-size: 14px;
   line-height: 18px;
-  color: rgba(0,0,0,0.54);
+  color: white;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: bold;
@@ -581,16 +570,17 @@ label {
 }
 
 .ping-dialog form textarea {
-    margin-top: 1.5em;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
     border: none;
-    border-bottom: 2px solid rgba(0,0,0,0.08);
-    padding: 1em;
+    border-bottom: 2px solid rgba(255,255,255,.5);
+    padding: 1rem;
     margin-right: 1em;
     font-size: 24px;
-    color: #313131;
+    color: white;
     font-weight: normal;
     outline: 0;
-    width: 75%;
+    width: 100%;
     background: transparent;
     -webkit-transition: border-color 1s linear;
     -moz-transition: border-color 1s linear;
@@ -600,7 +590,8 @@ label {
 }
 
 .ping-dialog form textarea:focus {
-  border-bottom: 2px solid #0000ee;
+  border-color: wee0000;
+  color: #fcca45;
   -webkit-transition: border-color 1s linear;
   -moz-transition: border-color 1s linear;
   -ms-transition: border-color 1s linear;
@@ -609,12 +600,10 @@ label {
 }
 
 .ping-dialog form button {
-  padding: 1em;
-  font-size: 24px;
   border: none;
   background: transparent;
+  width: 100%;
   color: rgba(0,0,0,0.1);
-  font-weight: bold;
   text-decoration: none;
   -webkit-transition: color 1s linear;
   -moz-transition: color 1s linear;
@@ -626,8 +615,8 @@ label {
 }
 
 .ping-dialog form button.ready {
-  color: #0000ee;
-  text-decoration: underline;
+  color: #e21640;
+  background: white;
   -webkit-transition: color 1s linear;
   -moz-transition: color 1s linear;
   -ms-transition: color 1s linear;
@@ -645,36 +634,16 @@ label {
   left: 0;
   right: 0;
   width: 100%;
-  height: 96px;
+  height: 20%;
   text-align: center;
-  background: white;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 12px;
-  color: #0000ee;
-  text-decoration: underline;
-  letter-spacing: 0.01em;
+  text-decoration: none;
   z-index: 100;
   outline: 0;
+  box-shadow: none;
 }
 
-.button {
+.dialog-close-button .button-inset {
   background: white;
-  color: #0000ee;
-  border: 1px solid #ddd;
-  padding: 0.75rem;
-  cursor: pointer;
-  outline: 0;
-  display: inline-block;
-  border-radius: 3px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  box-shadow: 0px 3px 6px rgba(0,0,0,0.03);
-}
-
-.button:hover,
-.button:focus {
-  background: #fafafa;
-  /* box-shadow: 0px 3px 4px rgba(0,0,0,0.09); */
-  /* border-color: #ccc; */
-}
+  border-radius: 100px;
+  padding: 1rem;
+  color: #8400ff;
