@@ -1,0 +1,12 @@
+/* Header.js */
+.Header {
+  display: flex;
+  flex: initial;
+  justify-content: space-between;
+}
+
+.Header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

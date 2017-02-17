@@ -1,5 +1,26 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
   font-family: sans-serif;
+  background: #0088f9;
+}
+
+#root {
+  height: 100%;
+}
+
+.a {
+ a: #0088f9;
+ b: #8400ff;
+ c: #fcca45;
+ d: #e21640;
 }
