@@ -5,5 +5,9 @@
   "main": "index.js",
   "repository": "https://github.com/apokusin/club-fail.git",
   "author": "Artur Pokusin <git@pokusin.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "create-react-app": "^1.0.4",
+    "yarn": "^0.20.3"
+  }
 }
