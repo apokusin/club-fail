@@ -1,0 +1,9 @@
+{
+  "name": "club-fail",
+  "version": "1.0.0",
+  "description": "an artisanal minecraft server",
+  "main": "index.js",
+  "repository": "https://github.com/apokusin/club-fail.git",
+  "author": "Artur Pokusin <git@pokusin.com>",
+  "license": "MIT"
+}
