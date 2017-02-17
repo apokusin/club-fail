@@ -14,13 +14,18 @@
 }
 
 .PlayerList__placeholder {
-  
+
 }
 .PlayerList__subtitle {
   font-size:0.75rem;
   text-transform: none;
   font-weight: normal;
   margin-top: 0.5rem;
+}
+
+.PlayerList__item {
+  color: rgba(0,0,0,0.5);
+  text-align: center;
 }
 
 .PlayerList__title {

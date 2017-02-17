@@ -12,14 +12,14 @@ const PlayerList = ({players, status, online, error}) => (
       <h2
         className="PlayerList__title"
       >
-        {status === 'success' && players.list.length > 1 ? "Who's online" : "Nobody online 😞"}
+        {"Who's online"}
         {error}
         <div className="PlayerList__subtitle">
           Join the server by connecting to <code>club.fail</code>
         </div>
       </h2>
     </li>
-    {status === 'success' &&
+    {online &&
       players.list.map((player, index) => (
       <li
         key={index}
@@ -28,10 +28,10 @@ const PlayerList = ({players, status, online, error}) => (
         <Player name={player} />
       </li>
     ))}
-    {status === 'success' && players.list.length < 1 && (
+    {!online && (
       <li key={'placeholder'}>
-        <div className="PlayerList__placeholder">
-          No players
+        <div className="PlayerList__item">
+          No players 😞
         </div>
       </li>
     )}
