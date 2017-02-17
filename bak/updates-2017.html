@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Club F</title>
+    <link rel="stylesheet" href="styles.css"/>
+  </head>
+  <body>
+    <div class="content-container">
+      <header class="header">
+        <a href="/" class="logo">
+          <img src="logo.png" alt="Club Fail" height="44"/>
+        </a>
+        <section class="links-area">
+          <button class="button button--ping" id="showPingDialogButton">Contact Mods
+        </button>
+          <nav>
+            <button class="button server-ip-label clipboard" data-clipboard-target="#ip-value-input">
+              <span class="button-content">
+                <span class="ip-caption">Click to copy</span>
+                <span class="ip-address">club.fail</span>
+                <input id="ip-value-input" value="club.fail"></input>
+              </span>
+            </button>
+            <a class="button" href="/updates-2017"><span class="enhance">🎁</span> What's new?</a>
+          </nav>
+        </section>
+      </header>
+      <div class="content-area">
+        <h2 class="page-title"><span class="enhance">🎁</span> What's new?</h2>
+        <p class="subtitle">We've moved the server to a new provider!</p>
+        <p>What does this mean for you?</p>
+        <p>Faster connections. More pixels. Less lag.</p>
+        <p>We've also started working on a new look. You're seeing the first snippets right now! Expect more updates in the coming weeks.</p>
+        <p>- artur</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-9559262-25', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
+      </main>
+    </div>
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+          (i[r].q = i[r].q || []).push(arguments)
+        }
+        ,
+        i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-9559262-25', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script src="/clipboard.min.js"></script>
+    <script>
+      function clipboard() {
+        var clipboard = new Clipboard('.clipboard');
+        var ipButton = document.querySelector('.server-ip-label');
+        clipboard.on('success', function(e) {
+
+          ipButton.classList.add('clipboard--copied');
+          setTimeout(function() {
+            ipButton.classList.remove('clipboard--copied');
+          }, 1000);
+
+          e.clearSelection();
+        });
+
+      }
+      clipboard();
+    </script>
+  </body>
