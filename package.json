@@ -1,13 +1,29 @@
 {
   "name": "club-fail",
+  "private": true,
   "version": "1.0.0",
   "description": "an artisanal minecraft server",
+  "homepage": "http://club.fail",
   "main": "index.js",
   "repository": "https://github.com/apokusin/club-fail.git",
   "author": "Artur Pokusin <git@pokusin.com>",
   "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^0.12.0",
+    "react-scripts": "0.9.0"
+  },
   "dependencies": {
-    "create-react-app": "^1.0.4",
-    "yarn": "^0.20.3"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
+
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

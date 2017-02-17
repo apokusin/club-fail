@@ -8,9 +8,9 @@ Hostname: `club.fail`
 
 **macOS**
 
-1. Install `yarn` or `npm` on your system
+1. Install `yarn` or `npm` on your system (`brew install yarn`)
 2. `yarn install`
-3. 
+3. `yarn start`
 
 **other platforms**
 
