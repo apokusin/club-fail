@@ -1,7 +1,7 @@
-# [club-fail](//club.fail)
+# [CLUB.FAIL](//club.fail)
 
 Server IP: `96.127.157.126`
-Hostname: `club.fail`
+Hostname: `http://club.fail`
 
 
 ## To start locally
