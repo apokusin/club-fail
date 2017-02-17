@@ -2,11 +2,15 @@
 .Header {
   display: flex;
   flex: initial;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
 }
 
 .Header__nav {
-  display: flex;
+  margin-top: 1rem;
+  /*display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
 }

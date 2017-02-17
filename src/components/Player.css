@@ -1,0 +1,9 @@
+/* Player.js */
+.Player {
+  padding: 1rem;
+  color:  #e21640;
+  margin-top: 0.25rem;
+  font-weight: bold;
+  border-radius: 3px;
+  text-align: center;
+}

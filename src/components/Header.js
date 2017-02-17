@@ -12,15 +12,10 @@ class Header extends Component {
               src={logo}
               className="Header__logo" 
               alt="CLUB.FAIL" 
-              height="44"
+              height="56"
             />
           </a>
         </h1>
-        <nav className="Header__nav">
-          <button>Contact mods</button>
-          <button>Join the server</button>
-          <button>More info</button>
-        </nav>
       </div>
     );
   }
