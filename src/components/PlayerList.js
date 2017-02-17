@@ -14,6 +14,9 @@ const PlayerList = ({players, status, online, error}) => (
       >
         {status === 'success' && players.list.length > 1 ? "Who's online" : "Nobody online 😞"}
         {error}
+        <div className="PlayerList__subtitle">
+          Join the server by connecting to <code>club.fail</code>
+        </div>
       </h2>
     </li>
     {status === 'success' &&

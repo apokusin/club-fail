@@ -13,6 +13,16 @@
 .PlayerList__controls {
 }
 
+.PlayerList__placeholder {
+  
+}
+.PlayerList__subtitle {
+  font-size:0.75rem;
+  text-transform: none;
+  font-weight: normal;
+  margin-top: 0.5rem;
+}
+
 .PlayerList__title {
   font-size: 16px;
   text-transform: uppercase;
