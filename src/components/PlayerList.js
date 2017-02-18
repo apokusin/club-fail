@@ -9,19 +9,18 @@ const PlayerList = (props) => {
     status,
     Playerlist,
     Players,
-    Version,
   } = props;
 
   // Add button to display gif when no players
 
   const ready = status ==="OK";
 
-  const mods = [
-    'playfulcyanide',
-    'RonaldFoose',
-    'Vv1ll',
-    'theSappster',
-  ];
+  const mods = {
+    'playfulcyanide': 'Admin',
+    'RonaldFoose': 'Admin',
+    'Vv1ll': 'Mod',
+    'theSappster': 'Discord',
+  };
 
   const refresh = () => { window.location.reload()};
 
@@ -56,10 +55,13 @@ const PlayerList = (props) => {
           Playerlist.map((player, index) => {
             return (
               <li
-              key={index}
-              className={`PlayerList__item ${mods[player] ? 'PlayerList__item--mod' : ''}`}
-            >
-              <Player name={player} />
+                key={index}
+                className="PlayerList__item"
+              >
+              <Player 
+                name={player}
+                mod={mods[player]}
+              />
             </li>)
           })
         }
@@ -70,7 +72,7 @@ const PlayerList = (props) => {
             className="PlayerList__refresh"
             onClick={refresh}
           >
-            Check again
+            Refresh
           </button>
         </div>
       }
@@ -81,7 +83,6 @@ const PlayerList = (props) => {
 PlayerList.defaultProps = {
   Playerlist: false,
   Players: 0,
-  Version: '',
   status: 'LOADING',
 }
 
@@ -95,7 +96,6 @@ PlayerList.propTypes = {
     )
   ]),
   Players: React.PropTypes.number,
-  Version: React.PropTypes.string,
 };
 
 export default PlayerList;

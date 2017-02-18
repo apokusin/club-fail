@@ -1,9 +1,51 @@
 /* Player.js */
 .Player {
-  padding: 1rem;
-  color:  #e21640;
   margin-top: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   font-weight: bold;
   border-radius: 3px;
   text-align: center;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+  color:  rgb(2, 46, 87);
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.Player__name {
+  flex: 1;
+}
+
+.Player__mod {
+  font-family: "Bangers";
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  padding: 0.5rem 0.85rem 0.3rem;
+  line-height: 1em;
+  margin-left: 1rem;
+  border-radius: 100px;
+  text-align: center;
+  min-width: 82px;
+  width: 82px;
+}
+
+.Player--Admin .Player__mod {
+  background: #fcca45;
+  color: black;
+}
+
+.Player--Mod .Player__mod {
+  background: #fcca45;
+  color: black;
+}
+
+.Player--Member .Player__mod {
+  color: white;
+  background-color: #0088f9;
+}
+.Player--Guest .Player__mod {
 }
