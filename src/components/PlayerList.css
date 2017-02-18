@@ -4,6 +4,7 @@
 .PlayerList__wrapper {
   background: transparent;
   max-width: 300px;
+  min-height: 180px;
   margin: 2rem auto 3rem;
   padding: 0;
   padding: 0;
@@ -29,7 +30,7 @@
   letter-spacing: 0.055em;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
-  /*color: rgb(2, 46, 87);*/
+  color: rgb(2, 46, 87);
 }
 
 .PlayerList__title--error {
@@ -39,7 +40,6 @@
   border-color: transparent;
   border-radius: 10px;
   margin-bottom: 2rem;
-  /*box-shadow: -14px -13px 0px #e21640;*/
 }
 
 .PlayerList__title--loading {
@@ -49,6 +49,11 @@
   margin-bottom: 2rem;
   background: transparent;
   border-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
 }
 
 
@@ -65,9 +70,10 @@
 }
 
 .PlayerList__item--empty {
-  padding: 0.25rem 0 1rem;
+  padding: 0.75rem 0 1rem;
   font-weight: bold;
   text-align: center;
+  color: rgb(2, 46, 87);
 }
 
 
@@ -75,6 +81,11 @@
 .PlayerList__footer {
   text-align: center;
   margin-top: 1rem;
+}
+
+.PlayerList__wrapper--ready .PlayerList__refresh {
+  box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+  background: transparent;
 }
 
 .PlayerList__refresh {
@@ -88,7 +99,7 @@
   font-weight: bold;
   background: rgba(255,255,255,0.9);
   letter-spacing: 0.1em;
-  color: rgb(2, 46, 87);
+  color: #0088f9;
   margin-bottom: 1rem;
   cursor: pointer;
   box-shadow:  0px 3px 6px rgba(0,0,0,0.2);
@@ -111,7 +122,7 @@
   background: white;
   color: #8400ff;
   box-shadow:  0px 1px 3px rgba(0,0,0,0.3);
-  transform: scale(1.075) translateY(2px);
+  transform: scale(1.075) translateY(1px);
   transition: 0ms;
 }
 
