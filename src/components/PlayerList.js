@@ -9,13 +9,21 @@ const PlayerList = (props) => {
     status,
     Playerlist,
     Players,
-    MaxPlayers,
     Version,
   } = props;
 
   // Add button to display gif when no players
 
   const ready = status ==="OK";
+
+  const mods = [
+    'playfulcyanide',
+    'RonaldFoose',
+    'Vv1ll',
+    'theSappster',
+  ];
+
+  const refresh = () => { window.location.reload()};
 
   return (
     <div 
@@ -30,39 +38,40 @@ const PlayerList = (props) => {
       }
       {status === "LOADING" &&
         <div className="heading PlayerList__title PlayerList__title--loading">
-          Loading player list…
+          Fetching player list…
         </div>
       }
       {ready &&
         <h2 className="heading PlayerList__title">
-          {"Online now!"}
+          {"Online now:"}
         </h2>
       }
       <ul className="PlayerList">        
         {ready && Players === 0 && (
           <div className="PlayerList__item PlayerList__item--empty">
-            No players 😞
+            No players online 😞
           </div>
         )}
         {Playerlist &&
-          Playerlist.map((player, index) => (
-            <li
+          Playerlist.map((player, index) => {
+            return (
+              <li
               key={index}
-              className="PlayerList__item"
+              className={`PlayerList__item ${mods[player] ? 'PlayerList__item--mod' : ''}`}
             >
               <Player name={player} />
-            </li>
-          ))
+            </li>)
+          })
         }
       </ul>
-      {false && ready &&
+      {status !== 'LOADING' &&
         <div className="PlayerList__footer">
-          <div className="PlayerList__join">
-            Join the server by connecting to <code>club.fail</code>
-          </div>
-          <div className="PlayerList__facts">
-            {Version && <div>{'Server version:'} <code>{Version}</code></div>}
-          </div>
+          <button 
+            className="PlayerList__refresh"
+            onClick={refresh}
+          >
+            Check again
+          </button>
         </div>
       }
     </div>
@@ -86,7 +95,6 @@ PlayerList.propTypes = {
     )
   ]),
   Players: React.PropTypes.number,
-  MaxPlayers: React.PropTypes.number,
   Version: React.PropTypes.string,
 };
 
