@@ -11,6 +11,7 @@
   font-weight: bold;
   background: rgba(0,0,0,0.65);
   transform: scale(1);
+  transition: all 75ms linear;
 }
 
 .Join__apply:hover,
@@ -20,6 +21,12 @@
   color: #8400ff;
   transform: scale(1.05);
   transition: all 75ms linear;
+}
+
+.Join__apply:active {
+  transition: 0ms;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.33);
+  transform: scale(1.05) translateY(2px);
 }
 
 
@@ -33,6 +40,12 @@
   font-size: 0.87rem;
   color: rgba(0,0,0,0.65);
   display: block;
+}
+
+.Join__heading {
+  font-family: 'Bangers', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.17rem
 }
 
 .Join__ip ol {
@@ -55,7 +68,7 @@
   border-radius: 4px;
   cursor: pointer;
   transform: scale(1);
-  transition: all 75ms linear;
+  transition: all 100ms linear;
 }
 
 .Join__ip code:hover,
