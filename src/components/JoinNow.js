@@ -10,10 +10,17 @@ class JoinNow extends Component {
           href="http://goo.gl/forms/y8dFcoyVmIYD6tJP2"
           target="_blank"
         >
-          Apply to join
+          Join the club
         </a>
         <div className="Join__ip">
-          Join the server by connecting to <code>club.fail</code>
+          <h3 className="Join__heading">Already a member?</h3>
+          <ol>
+            <li>Open Minecraft</li>
+            <li>Multiplayer</li>
+            <li>Add Server</li>
+            <li>Server address: <code>club.fail</code></li>
+            <li>Done and join!</li>
+          </ol>
         </div>
       </div>
     );
