@@ -12,7 +12,7 @@ class Header extends Component {
               src={logo}
               className="Header__logo" 
               alt="CLUB.FAIL" 
-              height="56"
+              height="54"
             />
           </a>
         </h1>

@@ -1,44 +1,143 @@
 /* PlayerList.js */
-.PlayerList {
-  list-style-type: none;
-  border-radius: 30px;
-  padding: 0;
-  color: white;
+
+
+.PlayerList__wrapper {
+  background: transparent;
   max-width: 300px;
-  margin: 0 auto 2rem;
-  background: white;
-  /*box-shadow: 0px 0px 0px 2px rgba(255,255,255,0.5);*/
-  border: 20px solid rgba(255,255,255,0.5);
-}
-.PlayerList__controls {
-}
-
-.PlayerList__placeholder {
-
-}
-.PlayerList__subtitle {
-  font-size:0.75rem;
-  text-transform: none;
-  font-weight: normal;
-  margin-top: 0.5rem;
+  min-height: 180px;
+  margin: 2rem auto 3rem;
+  padding: 0;
+  padding: 0;
+  border-radius: 10px;
+  color: #0088f9;
+  transition: all 100ms ease-in-out;
 }
 
-.PlayerList__item {
-  color: rgba(0,0,0,0.5);
-  text-align: center;
+.PlayerList__wrapper.PlayerList__wrapper--ready {
+  background: rgba(255,255,255,0.87);
+  box-shadow:
+    0px 0px 0px 14px rgba(255,255,255,0.87),
+    0px 1px 2px rgba(0,0,0,0.1),
+    0px 7px 25px rgba(0,0,0,0.15);
+  transition: all 300ms ease-in-out;
 }
 
 .PlayerList__title {
-  font-size: 16px;
+  font-size: 30px;
   text-transform: uppercase;
   opacity: 1;
   text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  background: white;
-  color: #0088f9;
+  letter-spacing: 0.055em;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  color: rgb(2, 46, 87);
+}
+
+.PlayerList__title--error {
+  color: rgb(2, 46, 87);
+  font-size: 1.9rem;
+  background: ;
+  border-color: transparent;
   border-radius: 10px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom: 3px solid rgba(255,255,255,0.5);
+  margin-bottom: 2rem;
+}
+
+.PlayerList__title--loading {
+  color: rgba(0,0,0,0.25);
+  border-radius: 10px;
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+  background: transparent;
+  border-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
+.PlayerList {
+  list-style-type: none;
+}
+
+.PlayerList__item {
+  position: relative;
+}
+
+.PlayerList__item--mod {
+}
+
+.PlayerList__item--empty {
+  padding: 0.75rem 0 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(2, 46, 87);
+}
+
+
+
+.PlayerList__footer {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.PlayerList__wrapper--ready .PlayerList__refresh {
+  box-shadow: 0px 0px 1px rgba(0,0,0,0.2);
+  background: transparent;
+}
+
+.PlayerList__refresh {
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  border: none;
+  margin: 0;
+  font: inherit;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  background: rgba(255,255,255,0.9);
+  letter-spacing: 0.1em;
+  color: #0088f9;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  box-shadow:  0px 3px 6px rgba(0,0,0,0.2);
+  transition: all 75ms linear;
+  transform: scale(1);
+  outline: 0;
+}
+
+.PlayerList__refresh:hover,
+.PlayerList__refresh:focus {
+  transition: all 250ms ease-in;
+  transform: scale(1.075);
+  background: white;
+  color: #8400ff;
+  box-shadow:  0px 6px 9px rgba(0,0,0,0.25);
+  transition: all 75ms linear;
+}
+
+.PlayerList__refresh:active {
+  background: white;
+  color: #8400ff;
+  box-shadow:  0px 1px 3px rgba(0,0,0,0.3);
+  transform: scale(1.075) translateY(1px);
+  transition: 0ms;
+}
+
+
+.PlayerList__facts {
+  padding: 0rem 2rem;
+  flex: 1;
+  text-align: center;
+  /*border-top: 1px solid rgba(0,0,0,0.1);*/
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  line-height: 1em;
+  opacity: 0.7;
+}
+.PlayerList__facts code {
+  font-size: 1.3em;
+  font-weight: 400;
 }
