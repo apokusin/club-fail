@@ -1,4 +1,5 @@
 /* move along nothing to see here */
+@import url('https://fonts.googleapis.com/css?family=Bangers|Open+Sans');
 
 .App {
   /*display: flex;*/
@@ -6,10 +7,16 @@
   align-items: stretch;*/
   color: white;
   padding-top: 15%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .App__content {
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
+}
+
+/*Typography*/
+h1, h2, .heading {
+  font-family: 'Bangers', sans-serif;
 }
