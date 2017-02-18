@@ -9,7 +9,6 @@ class Nav extends Component {
           <li>
             <a
               className="Nav__button"
-              target="_blank"
               href="https://www.reddit.com/r/ClubFail/comments/5ulesr/what_happened_to_the_map/"
             >
               {"Where's the map?"}
@@ -19,7 +18,6 @@ class Nav extends Component {
             <a
               className="Nav__button"
               href="https://www.reddit.com/r/ClubFail/comments/5uli8y/about_the_server/"
-              target="_blank"
             >
               About the server
             </a>
@@ -27,7 +25,6 @@ class Nav extends Component {
           <li>
             <a
               className="Nav__button"
-              target="_blank"
               href="https://www.reddit.com/r/ClubFail/comments/5ulikn/how_to_use_backpacks/"
             >
               Learn about backpacks
