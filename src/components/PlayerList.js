@@ -20,6 +20,21 @@ const PlayerList = (props) => {
     'RonaldFoose': 'Admin',
     'Vv1ll': 'Mod',
     'theSappster': 'Discord',
+
+    'NotSoNoble6': 'Member',
+    'SoaringKittens': 'Member',
+    'Nash_Contra': 'Member',
+    'Blade_Hawk': 'Member',
+    'SpyderShadow': 'Member',
+    'Your_Dealer': 'Member',
+    'Nolite': 'Member',
+    'Classiest': 'Member',
+    'AartsyFartsy': 'Member',
+    'Krisbyingotn': 'Member',
+    'bcstay94': 'Member',
+    'angry_cyanide': 'Member',
+    'libertysteele': 'Member',
+
   };
 
   const refresh = () => { window.location.reload()};
