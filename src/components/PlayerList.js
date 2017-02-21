@@ -17,20 +17,20 @@ const PlayerList = (props) => {
 
   const mods = {
     'playfulcyanide': 'Admin',
-    'RonaldFoose': 'Admin',
-    'Vv1ll': 'Mod',
-    'theSappster': 'Discord',
+    'ronaldfoose': 'Admin',
+    'vv1ll': 'Mod',
+    'thesappster': 'Discord',
 
-    'NotSoNoble6': 'Member',
-    'SoaringKittens': 'Member',
-    'Nash_Contra': 'Member',
-    'Blade_Hawk': 'Member',
-    'SpyderShadow': 'Member',
-    'Your_Dealer': 'Member',
-    'Nolite': 'Member',
-    'Classiest': 'Member',
-    'AartsyFartsy': 'Member',
-    'Krisbyingotn': 'Member',
+    'notsonoble6': 'Member',
+    'soaringkittens': 'Member',
+    'nash_contra': 'Member',
+    'blade_hawk': 'Member',
+    'spydershadow': 'Member',
+    'your_dealer': 'Member',
+    'nolite': 'Member',
+    'classiest': 'Member',
+    'aartsyfartsy': 'Member',
+    'krisbyingotn': 'Member',
     'bcstay94': 'Member',
     'angry_cyanide': 'Member',
     'libertysteele': 'Member',
@@ -75,7 +75,7 @@ const PlayerList = (props) => {
               >
               <Player 
                 name={player}
-                mod={mods[player]}
+                mod={mods[player.toLowerCase()]}
               />
             </li>)
           })
