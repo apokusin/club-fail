@@ -20,7 +20,7 @@ const PlayerList = (props) => {
     'ronaldfoose': 'Admin',
     'vv1ll': 'Mod',
     'thesappster': 'Discord',
-
+    'pogusin': 'Member',
     'notsonoble6': 'Member',
     'soaringkittens': 'Member',
     'nash_contra': 'Member',
