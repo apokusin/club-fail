@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import ClipboardButton from 'react-clipboard.js';
 
 import './JoinNow.css';
@@ -29,13 +30,13 @@ class JoinNow extends Component {
   render() {
     return (
       <div>
-        <a
+        <ReactGA.OutboundLink
           className="Join__apply"
-          href="http://goo.gl/forms/y8dFcoyVmIYD6tJP2"
-          target="_blank"
-        >
-          Join the club
-        </a>
+          eventLabel="join-application"
+          to="http://goo.gl/forms/y8dFcoyVmIYD6tJP2"
+          target="_blank">
+          {"Join the club"}
+        </ReactGA.OutboundLink>
         <div className="Join__ip">
           <h3 className="Join__heading">Already a member?</h3>
           <ol>
