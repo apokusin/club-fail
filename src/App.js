@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Fetch from 'react-fetch';
-import ReactGA from 'react-ga');
+import ReactGA from 'react-ga';
 
 import Header from './components/Header';
 import Nav from './components/Nav';
@@ -9,9 +9,11 @@ import PlayerList from './components/PlayerList';
 
 import './App.css';
 class App extends Component {
+  
   componentDidMount() {
     ReactGA.initialize('UA-9559262-25');
   }
+
   render() {
     return (
       <div className="App">
