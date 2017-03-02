@@ -12,6 +12,8 @@ class App extends Component {
   
   componentDidMount() {
     ReactGA.initialize('UA-9559262-25');
+    ReactGA.set({ page: window.location.pathname });
+    ReactGA.pageview(window.location.pathname);
   }
 
   render() {
