@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import Fetch from 'react-fetch';
 import ReactGA from 'react-ga';
 
-import Header from './components/Header';
-import Nav from './components/Nav';
-import JoinNow from './components/JoinNow';
-import PlayerList from './components/PlayerList';
+import {
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
+
+import MapPage from './components/MapPage';
+import RadioPage from './components/RadioPage';
 
 import './App.css';
 class App extends Component {
@@ -20,17 +22,12 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App__content">
-
-          <Header />
-          
-          <Fetch url="https://api.minetools.eu/query/96.127.157.126">
-            <PlayerList />
-          </Fetch>
-          
-          <Nav />
-          
-          <JoinNow />
-
+          <Router>
+            <div>
+              <Route exact path="/" component={MapPage}/>
+              <Route path="/fm" component={RadioPage}/>
+            </div>
+          </Router>
         </div>
       </div>
     );
