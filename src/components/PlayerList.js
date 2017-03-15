@@ -34,6 +34,7 @@ const PlayerList = (props) => {
     'bcstay94': 'Member',
     'angry_cyanide': 'Member',
     'libertysteele': 'Member',
+    'that1robbie': 'Member',
 
   };
 
