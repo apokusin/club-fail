@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
-import Fetch from 'react-fetch';
+import React from 'react';
 
 import Header from './Header';
 import Nav from './Nav';
 import JoinNow from './JoinNow';
-import PlayerList from './PlayerList';
 
-const MapPage = (props) => {
+const RadioPage = (props) => {
   return (
-    <main className="MapPage">
+    <main className="RadioPage">
       <Header />
 
       <Nav />
@@ -18,4 +16,4 @@ const MapPage = (props) => {
   );
 };
 
-export default MapPage;
+export default RadioPage;

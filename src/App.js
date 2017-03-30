@@ -8,6 +8,7 @@ import {
 
 import MapPage from './components/MapPage';
 import RadioPage from './components/RadioPage';
+import ClappingPage from './components/ClappingPage';
 
 import './App.css';
 class App extends Component {
@@ -21,14 +22,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App__content">
-          <Router>
-            <div>
-              <Route exact path="/" component={MapPage}/>
-              <Route path="/fm" component={RadioPage}/>
-            </div>
-          </Router>
-        </div>
+        <Router>
+          <div className="App__content">
+            <Route exact path="/" component={MapPage}/>
+            <Route path="/fm" component={RadioPage}/>
+            <Route path="/clapping" component={ClappingPage}/>
+          </div>
+        </Router>
       </div>
     );
   }
