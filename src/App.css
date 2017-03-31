@@ -1,5 +1,4 @@
 /* move along nothing to see here */
-@import url('https://fonts.googleapis.com/css?family=Bangers|Open+Sans');
 
 .App {
   /*display: flex;*/
@@ -16,7 +15,3 @@
   margin: 0 auto;
 }
 
-/*Typography*/
-h1, h2, .heading {
-  font-family: 'Bangers', sans-serif;
-}
