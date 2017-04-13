@@ -1,0 +1,61 @@
+/* Clapper */
+
+.Clapper {
+	width: 100%;
+	background: transparent;
+	display: block;
+	padding: 0;
+	color: rgb(2, 46, 87);
+	border-radius: 1em;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+.Clapper__signal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1em;
+	line-height: 1em;
+	background: transparent;
+	color: rgba(255,255,255,0.5);
+	transition: all 100ms ease-in-out;
+	padding: 1em 0.5em;
+}
+
+.Clapper__signal--ready {
+	color: #0088f9;
+	font-size: 10em;
+	transition: all 100ms ease-in-out;
+	background: rgb(2, 46, 87);
+	animation-name: tick;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;	
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes tick {
+	0% {
+		/*opacity: 1;*/
+		/*filter: hue-rotate(0deg) blur(1px) saturate(100%);*/
+		transform: skew(1);
+	}
+	50%{
+		/*filter: hue-rotate(120deg) blur(5px) saturate(50%);*/
+		transform: skew(0);
+		/*opacity: 1;*/
+	}
+	100% {
+		/*opacity: 0;*/
+		transform: skew(1);
+		/*filter: hue-rotate(250deg) blur(10px) saturate(20%);*/
+		/*transform: scale(0.5);*/
+	}
+}

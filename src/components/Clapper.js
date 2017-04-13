@@ -2,17 +2,17 @@ import React, { Component } from 'react';
 import moment from 'moment';
 import classnames from 'classnames';
 
-import './AudioTool.css';
+import './Clapper.css';
+import { makeFunny } from './Helpers';
 
-class AudioTool extends Component {
+class Clapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
       timer: null,
       ready: false,
-      flashCount: 0,
-      flashA: false,
-      flashB: false,
+      flashes: 0,
+      now: moment().get('second')
     }
   }
 
@@ -22,14 +22,13 @@ class AudioTool extends Component {
     //  every 5 seconds, toggle
 
     const timer = setInterval(() => {
-      const now = moment();
-      if (now.milliseconds() <= 5) {
+      if (moment().milliseconds() <= 5) {
         console.log('ready');
         clearInterval(this.state.timer);
         this.setState({
           timer: null,
           ready: true
-        })
+        });
         this.launch();
       }      
     }, 5);
@@ -38,32 +37,36 @@ class AudioTool extends Component {
     this.setState({
       timer: timer
     })
-  }
+  };
 
   nextFlash = () => {
     this.setState({
-      flashCount: 0,
-      flashA: !this.state.flashA,
-      flashB: !this.state.flashB,
+      flashCount: 0
     })
-  }
+  };
 
   launch = () => {    
-    const secondTimer = setInterval(() => {
-      if (this.state.flashCount >= 4) {
-        this.nextFlash();
-        return;
-      }
+    // const secondTimer = setInterval(() => {
+    //   if (this.state.flashCount >= 4) {
+    //     this.nextFlash();
+    //     return;
+    //   }
+    //
+    //   this.setState({
+    //     flashCount: this.state.flashCount + 1
+    //   })
+    // }, 1000);
 
+    const secondTimer = setInterval(() => {
       this.setState({
-        flashCount: this.state.flashCount + 1
-      })
+        now: moment().get('second')
+      });
     }, 1000);
     
     this.setState({
       timer: secondTimer
-    })
-  }
+    });
+  };
 
 
   componentDidMount() {
@@ -72,22 +75,23 @@ class AudioTool extends Component {
 
 
   render() {
+
+    const content = this.state.ready ? this.state.now : makeFunny();
+
     return (
-      <div className="AudioTool">
+      <div className="Clapper">
         <div className={classnames(
-          'AudioTool__signal',
+          'Clapper__signal',
           {
-            'AudioTool__signal--blink': this.state.ready,
-            'AudioTool__signal--a': this.state.flashA,
-            'AudioTool__signal--b': this.state.flashB
+            'Clapper__signal--ready': this.state.ready,
           }
           )}
         >
-          {this.state.flashCount + 1}
+          {content}
         </div>
       </div>
     );
   }
 }
 
-export default AudioTool;
+export default Clapper;
