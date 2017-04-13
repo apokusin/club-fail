@@ -1,8 +1,8 @@
 import React from 'react';
 
-import AudioTool from './AudioTool';
+import Clapper from './Clapper';
 
-const ClappingPage = (props) => {
+const ClappingPage = () => {
   return (
     <main className="ClappingPage">
     	<div
@@ -14,18 +14,8 @@ const ClappingPage = (props) => {
     			fontSize: 100
     		}}
     	>🍍</div>
-    	<h1
-    		style={{
-    			fontWeight: 'bold',
-    			marginBottom: 16,
-    			lineHeight: '1em',
-    			textAlign: 'center',
-    			letterSpacing: 2,
-    		}}
-    	>
-    		clapping.fail
-		</h1>
-    	<AudioTool />
+
+    	<Clapper />
     </main>
   );
 };
