@@ -33,8 +33,7 @@ class JoinNow extends Component {
         <ReactGA.OutboundLink
           className="Join__apply"
           eventLabel="join-application"
-          to="http://goo.gl/forms/y8dFcoyVmIYD6tJP2"
-          target="_blank">
+          to="https://goo.gl/forms/y8dFcoyVmIYD6tJP2">
           {"Join the club"}
         </ReactGA.OutboundLink>
         <div className="Join__ip">
