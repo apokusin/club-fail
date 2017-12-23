@@ -11,7 +11,7 @@ const MapPage = (props) => {
     <main className="MapPage">
       <Header />
 
-      <Fetch url="https://api.minetools.eu/query/96.127.157.126">
+      <Fetch url="https://api.minetools.eu/query/23.94.121.68">
         <PlayerList />
       </Fetch>
 

@@ -43,7 +43,8 @@ class JoinNow extends Component {
             <li>Multiplayer</li>
             <li>Add Server</li>
             <li>
-              Server address:
+              Server address: 
+              <br /><code>club.fail</code>
               <ClipboardButton
                 className={`
                   Join__ip-button
@@ -53,7 +54,7 @@ class JoinNow extends Component {
                 button-title="Server address to join club.fail"
                 onSuccess={this.onSuccess}
               >
-                club.fail
+                Copy address
               </ClipboardButton>
             </li>
             <li>Done and join!</li>
