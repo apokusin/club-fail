@@ -3,7 +3,6 @@ import React from 'react';
 import './Disco.css';
 
 import Logo from '../images/disco.png';
-import Loader from '../images/loader.gif';
 import Grid from 'react-css-grid'
 
 
