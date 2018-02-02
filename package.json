@@ -3,13 +3,14 @@
   "private": true,
   "version": "1.0.0",
   "description": "an artisanal minecraft server",
-  "homepage": "http://club.fail",
+  "homepage": "https://club.fail",
   "main": "index.js",
   "repository": "https://github.com/apokusin/club-fail.git",
   "author": "Artur Pokusin <git@pokusin.com>",
   "license": "MIT",
   "devDependencies": {
-    "react-scripts": "^1.1.0"
+    "react-scripts": "^1.1.0",
+    "uglifyjs-webpack-plugin": "^1.1.8"
   },
   "dependencies": {
     "classnames": "^2.2.5",
