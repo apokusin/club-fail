@@ -7,8 +7,7 @@ import {
 } from 'react-router-dom';
 
 import MapPage from './components/MapPage';
-import RadioPage from './components/RadioPage';
-import ClappingPage from './components/ClappingPage';
+import DiscoPage from './components/DiscoPage';
 
 import './App.css';
 class App extends Component {
@@ -25,8 +24,7 @@ class App extends Component {
         <Router>
           <div className="App__content">
             <Route exact path="/" component={MapPage}/>
-            <Route path="/fm" component={RadioPage}/>
-            <Route path="/clapping" component={ClappingPage}/>
+            <Route path="/disco" component={DiscoPage}/>
           </div>
         </Router>
       </div>

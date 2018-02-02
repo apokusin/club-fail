@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './Player.css';
 
@@ -20,8 +21,8 @@ Player.defaultProps = {
 };
 
 Player.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  mod: React.PropTypes.oneOf([
+  name: PropTypes.string.isRequired,
+  mod: PropTypes.oneOf([
     'Admin',
     'Mod',
     'Discord',
