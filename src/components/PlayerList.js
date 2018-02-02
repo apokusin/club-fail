@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Player from './Player';
 import './PlayerList.css';
@@ -64,7 +65,7 @@ const PlayerList = (props) => {
       <ul className="PlayerList">        
         {ready && Players === 0 && (
           <div className="PlayerList__item PlayerList__item--empty">
-            No players online 😞
+            No players online <span role="img" aria-label="disappointed face">😞</span>
           </div>
         )}
         {Playerlist &&
@@ -104,14 +105,14 @@ PlayerList.defaultProps = {
 
 
 PlayerList.propTypes = {
-  status: React.PropTypes.oneOf(['OK', 'ERR', 'LOADING']),
-  Playerlist: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.arrayOf(
-      React.PropTypes.string
+  status: PropTypes.oneOf(['OK', 'ERR', 'LOADING']),
+  Playerlist: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.arrayOf(
+      PropTypes.string
     )
   ]),
-  Players: React.PropTypes.number,
+  Players: PropTypes.number,
 };
 
 export default PlayerList;
