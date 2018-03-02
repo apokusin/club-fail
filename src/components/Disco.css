@@ -29,7 +29,7 @@ iteration-count | direction | fill-mode | play-state | name */
 
 @keyframes rotateIn {
   0% {
-    transform: rotate(90deg) scale(0.9);
+    transform: rotate(-90deg) scale(0.9);
     opacity: 0;
   }
   100% {
