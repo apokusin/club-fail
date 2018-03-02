@@ -5,12 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 0 4rem;
 }
 
 .Header__nav {
   margin-top: 1rem;
-  /*display: flex;
-  justify-content: center;
-  align-items: center;*/
 }

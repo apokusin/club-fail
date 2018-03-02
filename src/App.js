@@ -6,7 +6,7 @@ import {
   Route
 } from 'react-router-dom';
 
-import MapPage from './components/MapPage';
+import ClubPage from './components/ClubPage';
 import DiscoPage from './components/DiscoPage';
 
 import './App.css';
@@ -23,7 +23,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <div className="App__content">
-            <Route exact path="/" component={MapPage}/>
+            <Route exact path="/" component={ClubPage}/>
             <Route path="/disco" component={DiscoPage}/>
           </div>
         </Router>

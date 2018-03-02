@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from '../images/logo.png';
+import logo from '../images/logo-white.png';
 import './Header.css';
 
 class Header extends Component {
@@ -15,6 +15,9 @@ class Header extends Component {
               className="Header__logo" 
               alt="CLUB.FAIL" 
               height="54"
+              style={{
+                opacity: 0.8
+              }}
             />
           </Link>
         </h1>
