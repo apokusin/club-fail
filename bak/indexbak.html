@@ -29,6 +29,29 @@
         </section>
       </header>
       <iframe class="map-area" src="http://minecraft-host.club.fail:8123"/></iframe>
+      <!-- <div class="map-area maintenance">
+      <span class="icon">🤒</span>
+      Check back later today
+      <br/>
+      <br/>
+      <small>The server is experiencing issues and is down for emergency maintenance</small>
+    </div> -->
+    </div>
+    <div class="ping-dialog" id="pingDialog">
+      <button 
+        class="button dialog-close-button" 
+        id="hidePingDialogButton"
+        >
+            <span class="button-inset">
+                Nevermind
+            </span>
+        </button>
+      <form name="ping" action="">
+        <h2 class="page-title">What &rsquo;s up?</h2>
+        <label for="message">You look nice today</label>
+        <textarea placeholder="Halp the server is melting…" name="message" type="text" maxlength="150" rows="1"></textarea>
+        <button name="submit" type="submit" class="button ping-submit-button">Send message</button>
+      </form>
     </div>
     <script>
       (function(i, s, o, g, r, a, m) {
