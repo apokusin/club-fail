@@ -7,35 +7,37 @@
 }
 
 .Nav__button {
+  width: 200px;
+  height: 200px;
   display: flex;
   align-items: center;
-  margin: 0 0 0.25rem 0;
+  justify-content: center;
+  margin: 0 auto 1em;
   text-decoration: none;
-  background: transparent;
+  box-shadow: 0 0 0 2px white;
   border-radius: 10px;
   font-weight: bold;
-  padding: 1rem;
-  color: rgba(255,255,255,0.8);
+  color: #222;
   text-align: left;
   transition: all 50ms linear;
   transform: scale(1);
   outline: 0;
-  will-change: background-color;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.1);
 }
 
 .Nav__button:hover,
 .Nav__button:focus {
-  background: rgba(255,255,255,0.1);
-  color: white;
-  opacity: 0.8;
+  color: black;
   transform: scale(1.05);
+  background: white;
+  box-shadow: 0 0 0 2px #eee;
   transition: all 75ms linear;
 }
 
 .Nav__button img {
   vertical-align: middle;
   border-radius: 6px;
-  margin-right: 1em;
 }
 
 
