@@ -11,6 +11,19 @@ class Nav extends Component {
     return (
       <nav className="Nav">
         <ul className="Nav__list">
+        <li>
+            <ReactGA.OutboundLink
+              className="Nav__button"
+              eventLabel="show-discographers"
+              to="https://thediscographers.simplecast.fm">
+              <img
+                src={LogoDisco}
+                height="200"
+                width="200"
+                alt="The Discographers Podcast Logo"
+              />
+            </ReactGA.OutboundLink>
+          </li>
           <li>
             <ReactGA.OutboundLink
               className="Nav__button"
@@ -21,19 +34,6 @@ class Nav extends Component {
                 height="200"
                 width="200"
                 alt="Talking Fail Podcast Logo"
-              />
-            </ReactGA.OutboundLink>
-          </li>
-          <li>
-            <ReactGA.OutboundLink
-              className="Nav__button"
-              eventLabel="show-discographers"
-              to="https://thediscographers.simplecast.fm">
-              <img
-                src={LogoDisco}
-                height="200"
-                width="200"
-                alt="The Discographers Podcast Logo"
               />
             </ReactGA.OutboundLink>
           </li>
