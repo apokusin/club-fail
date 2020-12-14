@@ -3,7 +3,6 @@ import React from 'react';
 import './Disco.css';
 
 import Logo from '../images/disco.png';
-import Grid from 'react-css-grid'
 
 
   
@@ -28,14 +27,7 @@ const DiscoPage = (props) => {
         }}
       />
       <h2>Episodes</h2>
-      <section>
-        <Grid
-          width={100}
-          gape={20}
-        >
 
-        </Grid>
-      </section>
     </main>
   );
 };
