@@ -15,7 +15,7 @@ class Nav extends Component {
             <ReactGA.OutboundLink
               className="Nav__button"
               eventLabel="show-discographers"
-              to="https://thediscographers.simplecast.fm">
+              to="https://discogpod.com">
               <img
                 src={LogoDisco}
                 height="200"
