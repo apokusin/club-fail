@@ -1,9 +1,12 @@
 {
   "name": "club-fail",
   "private": true,
-  "version": "1.0.0",
-  "description": "an artisanal minecraft server",
+  "version": "1.1.0",
+  "description": "Entertainment hub.",
   "homepage": "https://club.fail",
+  "engines": {
+    "node": "^14.15.1"
+  },
   "main": "index.js",
   "repository": "https://github.com/apokusin/club-fail.git",
   "author": "Artur Pokusin <git@pokusin.com>",
@@ -20,7 +23,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "firebase deploy",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
